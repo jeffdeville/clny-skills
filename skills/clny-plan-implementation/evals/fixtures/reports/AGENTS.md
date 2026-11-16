@@ -1,0 +1,1 @@
+Engineering guidance starts at README.md. Read docs/architecture.md and the relevant service README before planning changes. Documentation changes accompany affected behavior. Do not run the full test suite.

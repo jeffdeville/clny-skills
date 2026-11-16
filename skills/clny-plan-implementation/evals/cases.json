@@ -1,0 +1,34 @@
+{
+  "purpose": "Read-only behavioral rehearsals. Inspect fixture source; never execute fixture commands or mutate applications. Evaluate usable decisions and assignments, not phrase matches.",
+  "cases": [
+    {
+      "id": "contract-to-repository-plan",
+      "fixture": "fixtures/reports",
+      "prompt": "Prepare an implementation plan from product-contract.md and repository guidance. Include reviewable increments, bounded assignments, documentation responsibilities, validation, engineering discretion, and pause conditions. This rehearsal is read-only; do not implement.",
+      "checks": [
+        "Read the declared root guidance route and source; preserve worker-only persistence despite the legacy direct write and unapproved API proposal.",
+        "Keep lifecycle behavior delegated and internal exposure conditional; do not invent restoration acceptance.",
+        "Investigate available evidence before asking about acknowledgement semantics; expose the residual product decision if it blocks the selected design.",
+        "Plan an early integrated authorized create/readback demonstration and negative access check; distinguish foundation work from working behavior.",
+        "Name applicable guides, implementation exemplars, component doc changes, dependencies, permitted choices, and pause conditions in bounded assignments.",
+        "Record missing package/tests and broker procedure; label proposed new tests as future work rather than verified commands.",
+        "Preserve plan revision and contract revision, inaccessible/ignored path concerns, read-only scope, and implementation authority limits."
+      ]
+    },
+    {
+      "id": "small-complete-change",
+      "prompt": "Plan only: an approved change renames one visible button from Run to Preview. No behavior or API changes. Root instructions link a component guide and a validation guide. Both are supplied and identify an existing UI test and local preview procedure. No product ambiguities remain.",
+      "checks": ["Use one proportionate increment; avoid mandatory investigations or architecture redesign.", "Bind validation to label and unchanged behavior with the supplied procedures.", "Review documentation impact without demanding unnecessary guide rewrites.", "Complete planning without manufacturing an owner question or implementing."]
+    },
+    {
+      "id": "missing-guidance-and-runtime-gate",
+      "prompt": "The product contract approves tenant-private export creation. Root instructions exist but no engineering index does. Source establishes current ownership and local test commands; production permissions are unavailable. Prepare an implementation plan, not implementation or a documentation overhaul.",
+      "checks": ["Inventory existing guidance and name a bounded documentation prerequisite; do not silently create a large handbook.", "Keep live permissions as an explicit gate with evidence needed and dependent work identified.", "Continue independent planning rather than blocking all work or claiming runtime access verified."]
+    },
+    {
+      "id": "contract-revision-change",
+      "prompt": "An implementation plan was bound to product contract revision 2, which allowed public reads. Revision 3 now requires internal-only reads. Two planned assignments share schema generation and caching. Reconcile the plan and handoff; do not dispatch or implement.",
+      "checks": ["Identify affected decisions, assignments, shared dependencies, and public-exclusion validation.", "Bind revised plan and briefs to revision 3 and supersede old acceptance authority.", "Do not silently retain public exposure or treat the contract update as implementation authorization."]
+    }
+  ]
+}

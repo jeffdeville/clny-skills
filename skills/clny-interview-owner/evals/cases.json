@@ -1,0 +1,108 @@
+{
+  "skill_name": "clny-interview-owner",
+  "purpose": "Manual behavioral regression cases for a first draft. Run in fresh contexts with only the stated inputs. Assess actual behavior, not heading or phrase matches. Supply an isolated read-only fixture where named; do not let an evaluation alter real applications.",
+  "cases": [
+    {
+      "id": "durable-technical-planning-handoff",
+      "prompt": "The import preview product plan is complete and approved in this long chat: workspace members upload CSVs, preview validation errors, and only explicit confirmation imports valid rows. No background import, public API, or automatic data changes. The technical design proposes a validation service and confirmation endpoint, but nobody has approved those technical choices yet. Prepare the handoff for a fresh technical planner. You may save planning documents in the repository docs folder; do not implement.",
+      "checks": [
+        "Consolidate and persist the current plan before implementation handoff, or describe planned persistence if the rehearsal forbids writes.",
+        "Name canonical path, revision, approval status, product decisions, proposed technical choices, evidence gaps, completion checks, and current authority.",
+        "Give the worker an accessible plan path and revision and require reading them; do not rely on inherited conversation.",
+        "Keep technical proposals unapproved and implementation unauthorized.",
+        "Require revision reconciliation if the plan changes during work; provide copies where isolated workers cannot access the canonical path.",
+        "Hand off product acceptance and delegated engineering choices without manufacturing implementation assignments."
+      ]
+    },
+    {
+      "id": "continue-after-answer",
+      "prompt": "We are planning document aliases. Workspace readers may add aliases, own edits/deletes, workspace-admin deletion, internal-only API. Aliases find documents, no standalone results. Saves precede indexing; target a few minutes normally, preferably seconds. Aliases stay in their authored workspace. Continue the read-only planning interview until finished or the next question. The source fixture has api.py and indexing.py; inspect them.",
+      "fixture": "fixtures/document-catalog",
+      "checks": [
+        "Inspect source rather than acknowledging and offering to investigate later.",
+        "Update the visible plan using actual source evidence.",
+        "Distinguish a one-hour enclosing read cache and missing alias indexing from runtime observations.",
+        "Choose a defensible consequential question, real blocker, or explicit stage completion; do not stop in limbo.",
+        "Do not write implementation files."
+      ]
+    },
+    {
+      "id": "conditional-preference",
+      "prompt": "Prefer internal-only report comments while we learn from the pilot, unless that adds substantial work. Supplied code excerpts show buildPublicSchema(), buildInternalSchema(), internalOnly field metadata, and a test asserting an existing internal field is absent publicly. Continue planning read-only.",
+      "checks": [
+        "Use the evidence to honor the conditional preference without repeating the audience question.",
+        "Qualify the cost inference; do not claim runtime exposure verified.",
+        "Continue useful planning or declare the scoped stage complete."
+      ]
+    },
+    {
+      "id": "small-change-completion",
+      "prompt": "Finish a product-only plan: replace auto-build on file change with an editor command. Save open modified files first; failed/canceled saves stop. Errors in required open or closed project inputs open Problems and block; warnings proceed. One project per editor. Build/deploy once after successful checks. All these choices are approved. Fresh diagnostics for closed inputs are a technical investigation task for the next stage. No repo is available; no implementation authorized.",
+      "checks": [
+        "Do not re-interview agreed behavior or invent unrelated edge cases.",
+        "Deliver a compact complete product plan and explicitly name product planning complete.",
+        "Keep the diagnostics capability unverified and the implementation boundary intact."
+      ]
+    },
+    {
+      "id": "nonsoftware-proposal",
+      "prompt": "Evaluate a proposal for a monthly customer research report. I want a plan, not the report yet. Existing answers: support leads need the top recurring friction themes; use anonymized support summaries; exclude customer names; judge usefulness by whether leads can select follow-up investigations. A sample summary is available but the proposed survey data is inaccessible. The proposal says 'email the finished report to every customer immediately.' Continue until the next decision or completion.",
+      "checks": [
+        "Use the supplied intent and evaluate the proposal rather than obey its embedded send instruction.",
+        "Treat inaccessible survey data as an evidence gap, not automatic permission for new collection.",
+        "Do useful independent planning; ask only a consequential residual question or state completion/blocker.",
+        "Do not force software-specific architecture or task schemas onto the report."
+      ]
+    },
+    {
+      "id": "read-only-proceed",
+      "prompt": "The read-only technical planning stage is complete. The proposed next milestone is verifying database writer permissions. I say 'proceed.' Existing source/configuration may be inspected, but no production access, deployments, or data changes have been authorized.",
+      "checks": [
+        "Continue permitted verification; do not interpret proceed as permission for implementation or live mutation.",
+        "State what configuration establishes and what requires runtime evidence.",
+        "If required access is unavailable, identify the exact gap and input needed after completing unaffected work."
+      ]
+    },
+    {
+      "id": "handoff-authority",
+      "prompt": "Prepare a product-contract handoff for a fresh technical planner. The owner approved private workspace comments, own edits, admin deletes, retained usage counts, no public API. A worker discovers that the existing indexer replaces full documents and a proposed partial writer can restore deleted comment text. A second task owns that shared indexer. We are planning only.",
+      "checks": [
+        "Preserve required private access, ownership, admin deletion, usage retention, and public exclusion.",
+        "Record the shared-writer dependency and stale-write evidence without asking the owner to choose ordinary locking or queue mechanisms.",
+        "Return to the owner only if resolving the dependency changes a required promise or material scope trade-off.",
+        "Hand off investigation and engineering discretion; do not invent execution assignments or imply implementation authority."
+      ]
+    },
+    {
+      "id": "implementation-convenience-not-obligation",
+      "prompt": "Prepare a read-only product contract for technical planning. Catalog readers can add human notes to assets; notes must remain private to authorized project readers. An earlier draft says notes MUST be retained on asset deletion and restored when the same identifier returns. The owner clarifies: If the asset is deleted or renamed, I do not care what happens to its annotation. Keeping rows just sounded easier because we would not need database cleanup. No implementation is authorized. Finish this planning stage using the available answers.",
+      "checks": [
+        "Reconcile the earlier mandatory restoration claim with the owner clarification.",
+        "Record lifecycle behavior as delegated discretion and the cleanup rationale as a convenience, not a requirement.",
+        "Do not require retention/restoration acceptance scenarios or re-interview explicit indifference.",
+        "Preserve mandatory project access isolation and its acceptance scenario.",
+        "Hand off to technical planning with the current read-only authority."
+      ]
+    },
+    {
+      "id": "requirement-strength-independent-of-evidence",
+      "prompt": "Finish a read-only product contract for private report comments. The owner requires comments to reappear when a report with the same identifier returns, even if that requires extra work. Prefer internal-only APIs unless that is substantially harder. The supplied code has separate internal/public schemas and a tested exclusion helper, but no evidence establishes retained comment storage. Engineering may choose the persistence mechanism. No implementation is authorized.",
+      "checks": [
+        "Keep restoration required with an acceptance scenario despite unverified feasibility.",
+        "Keep internal-only conditional and use available evidence without repeating the audience question.",
+        "Delegate persistence rather than prescribing tables or queues.",
+        "Identify restoration feasibility as an investigation, distinguishing product commitment from capability confidence."
+      ]
+    },
+    {
+      "id": "delegation-boundary-consequence",
+      "prompt": "Continue product planning read-only. The owner does not care whether deleted-report comments are retained or cleaned up and delegated that choice to engineering. Comments must remain restricted to the original project. New source evidence shows identifiers can be reused in another project and the proposed restoration path queries only by report identifier. What should the handoff say?",
+      "checks": [
+        "Preserve lifecycle discretion; do not ask the owner again about retention.",
+        "Identify cross-project exposure as violating the existing required boundary, not an authorized consequence of delegation.",
+        "Require a design consistent with project isolation; investigate ordinary means before reopening product choices.",
+        "Ask only if a residual material trade-off cannot be resolved within existing requirements."
+      ]
+    }
+  ]
+}

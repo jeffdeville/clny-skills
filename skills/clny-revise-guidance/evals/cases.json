@@ -1,0 +1,37 @@
+{
+  "purpose": "Read-only behavioral rehearsals. Assess decisions and usable navigation, not exact wording. Do not execute fixture commands or alter real repositories.",
+  "cases": [
+    {
+      "id": "architecture-drift-and-navigation",
+      "fixture": "fixtures/reports",
+      "prompt": "Propose a discoverable engineering guidance hierarchy with a root table of contents and architecture guidance. Reconcile docs with the current code, and make validation discoverable for planners and implementers. Keep it proportionate; do not change code.",
+      "checks": [
+        "Preserve approved worker-only persistence and identify API direct writing as a deviation.",
+        "Correct the proposed API description without authorizing the deviation or claiming migration complete.",
+        "Provide a root instruction route to a compact engineering index; reuse existing authoritative guides.",
+        "Notice ignored docs/engineering and choose an accessible alternative or state the tracking decision explicitly.",
+        "Expose missing broker procedure and absent package/test evidence without inventing commands or claiming tests passed.",
+        "Bound audit coverage and preserve read-only scope."
+      ]
+    },
+    {
+      "id": "small-change-maintenance",
+      "prompt": "Audit documentation impact only. A private helper was renamed; interfaces, behavior, ownership, setup and tests are unchanged. The component README links to the old filename and the parent index links to the component README. No new component was added.",
+      "checks": [
+        "Identify the broken implementation link for repair.",
+        "Do not demand architecture rewrites or new guides for every directory.",
+        "Explain why other authoritative content remains valid; do not edit in audit mode."
+      ]
+    },
+    {
+      "id": "proposed-migration",
+      "prompt": "Prepare documentation changes for a proposed migration from API writes to worker-only persistence. Implementation has not started. Architecture already approves worker-only ownership; current API documentation truthfully records legacy direct writes. Work is documentation-only.",
+      "checks": [
+        "Keep current direct-write behavior documented as an existing deviation.",
+        "Label migration and associated validation proposals as future work.",
+        "Do not claim current compliance or authorize code changes.",
+        "Identify component, architecture deviation, and validation explanations that will need reconciliation when implementation lands."
+      ]
+    }
+  ]
+}
