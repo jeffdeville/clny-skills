@@ -16,6 +16,8 @@ A request for new product behavior starts with an interview when consequential d
 
 The [shared intent contract](skills/clny-infer-intent/references/intent-contract.md) preserves requirements, discretion, and evidence limits. Every change explicitly reviews affected documentation, including inline explanations. Required corrections accompany the change; a justified no-edit conclusion is valid.
 
+Project engineering guidance owns reflection triggers and consequential project conventions. Planning exposes structural choices in a brief human proposal, with implementation detail and decision records alongside it. Implementation handoffs require independent review of each bounded increment or PR. Guidance revalidation examines relevant changes since the last supported assessment; use alone does not renew a rule. See the [decision-record contract](skills/clny-plan-implementation/references/decision-records.md) and [revalidation procedure](skills/clny-revise-guidance/references/project-decisions.md).
+
 ## Install on each computer
 
 Keep the five skills together: their relative references form one suite. The Markdown instructions have no dependency on a specific model, proprietary tool name, or personal filesystem path. Use the local skills mechanism of Codex or Claude Code (not a Claude.ai/Cowork upload).

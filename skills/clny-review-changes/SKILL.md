@@ -2,7 +2,7 @@
 name: clny-review-changes
 description: Review an existing PR or proposed code change against established product requirements, repository guidance, documentation, and validation evidence. Does not implement fixes or publish review comments unless separately authorized.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   status: draft
 ---
 
@@ -25,6 +25,14 @@ Trace representative required behavior through the affected callers, callees, pe
 Inspect tests and perform proportionate authorized targeted checks using discovered project procedures. Separate checks read, checks run, author-reported results, and unverified runtime claims. For a defect, assess whether regression evidence exercises the original failure and preserves working controls. A green test suite does not establish all required behavior.
 
 For stateful changes, review migration/release ordering and recovery of already-affected data. Read applicable PR templates and deployment guidance. Do not assume a future run refreshes data without checking relevant caches and skip conditions. Report environmental or pre-existing failures accurately; neither silently excuse them nor attribute them to the change without evidence.
+
+## Challenge necessity and guidance
+
+Read [the decision-record contract](../clny-plan-implementation/references/decision-records.md) and the initiative's plan and decision log. Discover project-owned reflection triggers through the engineering map. Review implemented changes, not standalone implementation plans; planning owns its pre-code assessment.
+
+Verify claimed reuse investigations against source. Distinguish owner requirements from implementer mechanisms, assess simpler alternatives, and name concrete maintenance obligations across the cumulative feature or stack. Investigate triggered choices without rationale; do not invent findings merely to fill a checklist. A documented rationale is evidence to challenge, not approval.
+
+Check whether applicable guidance is overdue or challenged and whether its reassessment used actual evidence. Use [the revalidation procedure](../clny-revise-guidance/references/project-decisions.md); in read-only review report required corrections without writing them. Guidance compliance is not sufficient when the rule itself appears inappropriate. Separate implementation defects, missing justification, and proposed guidance corrections. State limits when plan, history, or other repositories are inaccessible.
 
 ## Reconcile documentation explicitly
 

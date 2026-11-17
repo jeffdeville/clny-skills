@@ -2,7 +2,7 @@
 name: clny-plan-implementation
 description: Use when a product contract or agreed feature direction needs a repository-grounded implementation plan with reviewable increments, bounded agent assignments, documentation responsibilities, and validation procedures. Not for the initial product interview, implementing the plan, or a general documentation overhaul.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   status: "draft"
 ---
 
@@ -42,6 +42,12 @@ Evaluate the contract's candidate approaches; they are not binding unless the ow
 
 Preserve "I don't care" as delegation. Do not convert a convenient implementation behavior into product acceptance. Conversely, technical expense does not erase a required outcome. Keep conditional preferences conditional; revisit only when their condition or the limits of delegated discretion require it. Distinguish a chosen engineering invariant from an owner requirement so future changes use the right decision authority.
 
+## Make consequential choices visible
+
+Read [the decision-record contract](references/decision-records.md). Discover project-owned reflection triggers and assess applicable overdue or challenged guidance through [the revalidation procedure](../clny-revise-guidance/references/project-decisions.md). Keep implementation mechanisms distinct from owner requirements. Compare the smallest complete design with proposed additions, describing concrete maintenance obligations and failure tradeoffs rather than abstract reliability preferences.
+
+Expose every consequential structural addition in the human-facing proposal. Record significant choices and reuse evidence beside the plan; do not bury new architecture in assignments. Resolve ordinary choices independently, and bring only residual consequential tradeoffs outside delegated authority to the owner.
+
 ## Plan reviewable delivery
 
 Read [the plan and assignment contract](references/plan-and-assignments.md) before consolidating. Scale the plan to the work: a small change can have one increment and one implementer. Prefer an early integrated demonstration of a meaningful behavior across the relevant boundaries, then expand coverage. Necessary foundations are valid increments, but name what they enable and what they do not yet prove. Avoid deferring all integration evidence until the end.
@@ -70,4 +76,6 @@ Report completed planning work, evidence established, open decisions or gates, c
 
 ## Implementation handoff obligations
 
-Require the implementer to read accessible contract and plan revisions plus applicable project guidance before acting. Its future execution cycle is: inspect current context, implement one bounded increment, validate behavior, reconcile affected documentation, report evidence and remaining limitations, and continue within authorization. Report discrete outcomes rather than files touched alone. Pause only work dependent on an unresolved consequential decision; keep independent authorized work moving. Code complete, integration verified, deployed, and rollout complete are separate claims.
+Require the implementer to read accessible contract and plan revisions plus applicable project guidance before acting. Its future execution cycle is: inspect current context, implement one bounded increment, validate behavior, reconcile affected documentation and consequential decision records, obtain independent clny-review-changes review for the bounded increment or PR before treating it as ready, report evidence and remaining limitations, and continue within authorization. Report discrete outcomes rather than files touched alone. Pause only work dependent on an unresolved consequential decision; keep independent authorized work moving. Code complete, integration verified, deployed, and rollout complete are separate claims.
+
+The handoff must include the project reflection-guidance pointer, the decision-record contract, and the obligation to reassess overdue or challenged guidance on first relevant use during implementation. Carry its independent-review checkpoint into the project workflow guidance when authorized, so execution does not depend on remembering this conversation. Review cumulative stack behavior; resolve findings before advancing dependent work. Do not add a separate coding skill or special commit metadata.

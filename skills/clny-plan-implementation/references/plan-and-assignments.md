@@ -2,6 +2,15 @@
 
 Use descriptive behavior titles. These are content requirements, not a fixed number of documents, phases, or fields for every small change. Prefer one canonical plan with embedded assignments; split only when it improves actual use.
 
+## Human proposal and agent detail
+
+Start with a concise human-facing proposal, approximately one screen: user outcome, a compact flow diagram when useful, existing components reused, every consequential structural addition and its reason, unresolved choices, and current status. Link detailed implementation slices and the selective decision log. Detail expands the same design; it must not introduce hidden structural choices.
+
+A useful layout is plans/<initiative>/README.md, implementation.md, and decisions.md. Adapt to existing conventions and combine for small work. Preserve one canonical source for each fact rather than duplicate accounts. Use [the decision-record contract](decision-records.md).
+
+Before marking a slice ready, explain its concrete behavior, path through existing interfaces, consequential state changes and failure/recovery behavior, proposed mechanisms versus simpler alternatives, and completion evidence. Missing knowledge calls for bounded investigation; too many coupled outcomes call for narrowing or sequencing. Do not prescribe every helper or invent certainty to make a plan appear complete.
+
+
 ## Canonical implementation plan
 
 | Part | Required account |
