@@ -16,3 +16,5 @@ Run each case in a fresh context on Codex and Claude Code with the named skills 
 | Planning-only boundary | Established requirements and a complete plan, no implementation authorization. | Completes planning without edits to application behavior or external publication. |
 
 Also rerun the carried-forward interview and planning cases. Evaluate their original behavioral obligations against the revised suite. Record new results separately from the legacy skills' history.
+
+Project-owned decision guidance and revalidation cases are in [project-decisions.md](project-decisions.md). A limited Codex rehearsal and independent review are recorded in [the 2026-11-17 results](project-decisions-2026-11-17.md); they do not replace the broader cases above.

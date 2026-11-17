@@ -2,7 +2,7 @@
 name: clny-revise-guidance
 description: Use when establishing, auditing, or maintaining a repository's engineering guidance hierarchy, including its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Not for product interviews, implementation task decomposition, or changing application behavior.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   status: "draft"
 ---
 
@@ -35,6 +35,10 @@ Separate current implementation, approved architectural intent, known deviations
 Correct inaccurate descriptions using evidence. When implementation violates an approved rule, document the observed deviation and link its evidence without weakening the rule or silently blessing an exception. If authoritative sources conflict, investigate their scope, dates, and decision provenance. Ask for a decision only when the conflict remains material; complete unaffected curation first. Do not invent owners or approval history.
 
 Keep required constraints, recommendations, conditional preferences, and delegated choices distinguishable. Preserve rationale that helps a future engineer apply a rule. Avoid turning a convenient local pattern into a universal architectural mandate.
+
+## Establish and reassess project decisions
+
+Read [project decisions and revalidation](references/project-decisions.md) when establishing reflection triggers or assessing overdue, challenged, or change-sensitive project guidance. Keep concrete triggers project-owned and discoverable through the engineering map. Distinguish observed patterns from justified conventions. Assess relevant changes since last validation; following a rule does not renew its evidence. Preserve mandatory constraints while unresolved and propose corrections within authority.
 
 ## Maintain explanations with the change
 
