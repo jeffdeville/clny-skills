@@ -4,7 +4,7 @@ Use these shapes proportionally. A small change may fit in a paragraph. Keep one
 
 ## Durable product contract
 
-Use [the shared intent contract](../../clny-infer-intent/references/intent-contract.md) as the canonical requirements for content, decision meaning, documentation obligations, persistence, and recipient access. An interview produces an instance with explicit decision and approval status. Include usefulness measures separately from delivery acceptance when relevant.
+Use [the shared intent contract](../../clny-find-requirements/references/intent-contract.md) as the canonical requirements for content, decision meaning, documentation obligations, persistence, and recipient access. An interview produces an instance with explicit decision and approval status. Include usefulness measures separately from delivery acceptance when relevant.
 
 ## Compact evolving view
 

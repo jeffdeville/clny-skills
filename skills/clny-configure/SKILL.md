@@ -52,7 +52,7 @@ Read [project decisions and revalidation](references/project-decisions.md) when 
 
 ## Maintain explanations with the change
 
-Apply [the shared documentation obligation](../clny-infer-intent/references/intent-contract.md). Explicitly inspect inline comments and docstrings as well as guides. A change cannot be considered ready with inaccurate or materially incomplete affected explanations. ADRs supplement the maintained current account; they do not replace it.
+Apply [the shared documentation obligation](../clny-find-requirements/references/intent-contract.md). Explicitly inspect inline comments and docstrings as well as guides. A change cannot be considered ready with inaccurate or materially incomplete affected explanations. ADRs supplement the maintained current account; they do not replace it.
 
 
 For each affected behavior or boundary, identify the authoritative guide and the incoming links that help readers find it. Update component responsibilities, interfaces, invariants, error/recovery behavior, development procedures, and validation guidance where the change makes them inaccurate. Revisit the parent map when ownership or flow changes. A change that adds a responsibility or contradicts a recorded charter decision is a guidance finding: reconcile that responsibility with the owner rather than documenting it as settled. A folder edit does not by itself require a documentation edit; explain no-impact conclusions briefly.

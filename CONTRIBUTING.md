@@ -1,6 +1,6 @@
 # Contributing
 
-Keep skills portable between Codex and Claude Code. Use standard SKILL.md frontmatter with name and description, relative links, and generic capabilities rather than hardcoded tool names or personal paths. Keep the five-skill suite installable together. The shared intent contract lives under clny-infer-intent; reference it rather than duplicating its rules.
+Keep skills portable between Codex and Claude Code. Use standard SKILL.md frontmatter with name and description, relative links, and generic capabilities rather than hardcoded tool names or personal paths. Keep the five-skill suite installable together. The shared intent contract lives under clny-find-requirements; reference it rather than duplicating its rules.
 
 Keep inference, owner decisions about a change, planning, review, and documentation curation separate. The one owner interview inside curation is the repository charter, which records standing responsibilities and never a change; it reuses the interview conduct in clny-plan-requirements rather than restating it. Test changes against realistic prompts and assess outcomes rather than exact phrases. Include intended behavior reports, ambiguous intent, adequate existing PR requirements, conditional preferences, delegated choices, documentation drift, repositories with several unlike responsibilities, owners without expertise in a field, and access limits. Do not include private company/customer examples in the distributable fixtures.
 

@@ -8,7 +8,7 @@ metadata:
 
 # Review changes
 
-**Where this fits.** Change workflow, step 4 of 4. Before: an implemented change or PR. If its requirements are unclear, go back to `clny-infer-intent` and resume here. Findings about guidance or the charter go to `clny-configure`.
+**Where this fits.** Change workflow, step 4 of 4. Before: an implemented change or PR. If its requirements are unclear, go back to `clny-find-requirements` and resume here. Findings about guidance or the charter go to `clny-configure`.
 
 Understand the requirement before judging whether a change satisfies it. Assess actual behavior and evidence, not only the diff's style or the author's stated solution.
 
@@ -16,9 +16,9 @@ Understand the requirement before judging whether a change satisfies it. Assess 
 
 Read the request, PR description, linked requirements, current diff/base/head, existing review context, root instructions, README, and affected guidance. Note the reviewed revisions. Use available repository tools; report missing repositories or access. Review authorization does not itself authorize code edits, external comments, approval, or merge.
 
-Read [the shared intent contract](../clny-infer-intent/references/intent-contract.md). Check whether linked requirements establish applicable intent, decision authority, and coverage of the actual change. If adequate, proceed without another interview or separate intent document.
+Read [the shared intent contract](../clny-find-requirements/references/intent-contract.md). Check whether linked requirements establish applicable intent, decision authority, and coverage of the actual change. If adequate, proceed without another interview or separate intent document.
 
-If intent is missing or disputed, use `clny-infer-intent` to investigate existing evidence. It frames unresolved questions; `clny-plan-requirements` handles remaining product decisions. Carry forward context and resume review after resolution. Continue independent technical checks where useful, but do not declare requirement alignment settled while consequential intent is unknown. Do not treat an author's implementation or tests as approval of new behavior.
+If intent is missing or disputed, use `clny-find-requirements` to investigate existing evidence. It frames unresolved questions; `clny-plan-requirements` handles remaining product decisions. Carry forward context and resume review after resolution. Continue independent technical checks where useful, but do not declare requirement alignment settled while consequential intent is unknown. Do not treat an author's implementation or tests as approval of new behavior.
 
 ## Review implementation against the promise
 

@@ -1,6 +1,6 @@
 # Project decision rehearsal results — 2026-11-17
 
-Skill names in this record follow the 2026-11-19 renames; the runs used the earlier names clny-revise-guidance and clny-interview-owner.
+Skill names in this record follow the 2026-11-19 renames; the runs used the earlier names clny-revise-guidance, clny-interview-owner, and clny-infer-intent.
 
 ## Scope and method
 

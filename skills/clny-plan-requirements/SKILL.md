@@ -8,7 +8,7 @@ metadata:
 
 # Plan requirements
 
-**Where this fits.** Change workflow, step 2 of 4. Before: `clny-infer-intent` when a report or unclear PR needed investigation; otherwise start here for new behavior. Next: `clny-plan-implementation`. Skip this step when requirements are already established.
+**Where this fits.** Change workflow, step 2 of 4. Before: `clny-find-requirements` when a report or unclear PR needed investigation; otherwise start here for new behavior. Next: `clny-plan-implementation`. Skip this step when requirements are already established.
 
 Develop one evolving product contract the owner can understand and a fresh technical planner can use without the interview transcript. Establish required behavior, scope, constraints, preferences, delegated discretion, and supporting evidence. Technical planning subsequently determines architecture, delivery increments, task assignments, documentation changes, and validation procedures. Investigate facts before asking about them; scale depth to the cost of being wrong.
 
@@ -26,9 +26,9 @@ During exploratory interviews the contract may live in chat; say where it lives.
 
 ## Preserve the shared intent contract
 
-Read [the shared intent contract](../clny-infer-intent/references/intent-contract.md). It owns the distinctions between requirements, preferences, delegation, evidence, and approval. Use that same format for the product agreement; do not create a competing intent record.
+Read [the shared intent contract](../clny-find-requirements/references/intent-contract.md). It owns the distinctions between requirements, preferences, delegation, evidence, and approval. Use that same format for the product agreement; do not create a competing intent record.
 
-If arriving from `clny-infer-intent` or `clny-review-changes`, reuse their findings and ask only the remaining consequential product questions. If existing evidence already settles the requested behavior, skip the interview and continue the authorized planning or review. For a new request, seed the discussion from what the owner has already supplied.
+If arriving from `clny-find-requirements` or `clny-review-changes`, reuse their findings and ask only the remaining consequential product questions. If existing evidence already settles the requested behavior, skip the interview and continue the authorized planning or review. For a new request, seed the discussion from what the owner has already supplied.
 
 ## Investigate consequential uncertainty
 

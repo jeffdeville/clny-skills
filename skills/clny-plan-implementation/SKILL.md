@@ -8,7 +8,7 @@ metadata:
 
 # Plan implementation
 
-**Where this fits.** Change workflow, step 3 of 4. Before: established requirements, from `clny-plan-requirements`, `clny-infer-intent`, or an adequate existing document. Next: implementation, which has no skill of its own, then `clny-review-changes` for each increment.
+**Where this fits.** Change workflow, step 3 of 4. Before: established requirements, from `clny-plan-requirements`, `clny-find-requirements`, or an adequate existing document. Next: implementation, which has no skill of its own, then `clny-review-changes` for each increment.
 
 Turn a versioned product contract and repository engineering guidance into a canonical delivery plan a fresh implementer can use. Settle ordinary technical decisions through evidence. Preserve product commitments and delegated discretion. Specify enough to coordinate outcomes, boundaries, interfaces, and verification without prescribing every coding move.
 
@@ -18,7 +18,7 @@ Read the established intent record or canonical product contract and its exact r
 
 Record the authorized stage. Planning, saving a plan, approving product behavior, implementing, and deploying are distinct actions. Continue all useful authorized planning; do not dispatch implementation workers or change application behavior merely because the plan is ready. Preserve explicit read-only boundaries. A later "proceed" continues the authorized stage unless the user clearly expands it.
 
-Read [the shared intent contract](../clny-infer-intent/references/intent-contract.md). Established intent may come from an interview or evidence-based investigation. A ticket labeled Bug is not an accepted requirement. Use `clny-infer-intent` for unresolved factual intent and `clny-plan-requirements` for residual product choices; reuse adequate prior work.
+Read [the shared intent contract](../clny-find-requirements/references/intent-contract.md). Established intent may come from an interview or evidence-based investigation. A ticket labeled Bug is not an accepted requirement. Use `clny-find-requirements` for unresolved factual intent and `clny-plan-requirements` for residual product choices; reuse adequate prior work.
 
 Inspect existing branches, PRs, reviews, and reported checks when supplied. Plan remaining work rather than duplicating existing implementations. Verify their relevance to current source and distinguish reported historical checks from current evidence.
 
