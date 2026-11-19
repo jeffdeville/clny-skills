@@ -15,7 +15,7 @@ Make repository guidance discoverable, coherent, and trustworthy for a fresh pla
 
 ## Start from the repository's responsibilities
 
-Guidance follows from what the repository is accountable for. Check any recorded version against [the suite changelog](references/changelog.md) before reconciling the charter. Look for the charter marker on the engineering entry point to learn the charter's state; do not ask the user whether the setup is new. Scan the repository before interviewing, and treat what the scan finds as what exists rather than what is wanted. When establishing guidance, when the owner asks to resume or revisit the charter, or when a change adds, alters, or contradicts a recorded responsibility, read [the repository charter](references/repository-charter.md) and establish or reconcile the affected responsibilities with the owner, one at a time, at the ambition the owner chooses for each. A recorded and consistent charter needs no interview.
+Guidance follows from the objectives the repository serves. Check any recorded version against [the suite changelog](references/changelog.md) before reconciling the charter. Look for the charter marker on the engineering entry point to learn the charter's state; do not ask the user whether the setup is new. Scan the repository before interviewing, and treat what the scan finds as what exists rather than what is wanted. When establishing guidance, when the owner asks to resume or revisit the charter, or when a change adds, alters, or contradicts a recorded responsibility, read [the repository charter](references/repository-charter.md) and establish or reconcile the affected responsibilities with the owner, one at a time, at the ambition the owner chooses for each. A recorded and consistent charter needs no interview.
 
 A missing, unfinished, or outdated charter does not widen a narrower request. When maintaining guidance with a change, or auditing, report the charter's state as a gap and continue the requested work.
 
@@ -37,7 +37,7 @@ Use the engineering entry point identified in root `AGENTS.md` or the repository
 
 Keep the index mainly a table of contents with purpose, component responsibilities, and when each link applies. Charter decisions appear there as one-line summaries linking to their guides. Include or link root architecture guidance. Link substantive component guides near their owning code and cross-cutting practices where they are already maintained. Include a return route from focused guides. Do not duplicate policies, replace the root setup guide with an index, or introduce empty pages just to satisfy a schema.
 
-Follow enough source, configuration, tests, and existing decisions to understand the relevant ownership and behavior. For a broad map, sample meaningful paths and state coverage limits; do not imply every component was audited. Link evidence that helps readers verify consequential claims.
+Follow enough source, configuration, tests, and existing decisions to understand the relevant ownership and behavior. When establishing the charter, the scan must meet the coverage rule in the charter reference: every meaningful path is traced to a responsibility or raised with the owner. For narrower work, read what the scope requires and state coverage limits; do not imply every component was audited. Link evidence that helps readers verify consequential claims.
 
 ## Preserve authority while reconciling facts
 

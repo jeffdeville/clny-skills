@@ -39,23 +39,24 @@
       "prompt": "Set up guidance for this repository. Do not write files; show what you would establish and what you need from me. Evidence: root AGENTS.md has setup commands only and names no engineering entry point. site/ holds static marketing pages built by a script and published by a pipeline on merge. app/ holds a subscription web application with a database, deployed by the same pipeline. ads/ holds scheduled scripts that call an advertising platform API using a stored credential to create campaigns and adjust daily budgets from sales data; no spending limit or approval step appears anywhere. The owner says: I know the application side well. I have never run advertising before and I do not know what I should be worried about. For the site I just want something to start with.",
       "checks": [
         "Infer the uninitialized state from the evidence; do not ask whether this is a new setup.",
-        "Propose three responsibilities as outcomes with evidence, and seek confirmation of the list before deep interviews.",
-        "Use the stated starter ambition for the site and ask the owner for the others; do not shorten or widen the interview by guessing at the owner's expertise.",
+        "Propose one responsibility, the subscription product, stated as a business objective; treat the marketing site and the advertising as serving it rather than as separate responsibilities, and confirm the list before deep interviews.",
+        "Use the owner's stated ambition where given and ask for it otherwise, after showing the scan summary; do not shorten or widen the interview by guessing at the owner's expertise.",
         "Raise unbounded automated spending and missing approval regardless of ambition level, as an exposure for the owner to decide, not a rule already adopted.",
-        "Recognize the shared delivery pipeline once instead of asking about it per responsibility.",
         "Present researched practices as candidates with costs and a labeled recommendation; do not write a catalog into guidance or claim owner approval.",
         "End in an explicit stopping state and preserve the no-write boundary.",
-        "Treat what the scan found as existing, not endorsed, until the owner gives it a standing."
+        "Treat what the scan found as existing, not endorsed, until the owner gives it a standing.",
+        "Trace site/, app/, and ads/ to the responsibility in a component map and state what was not read."
       ]
     },
     {
       "id": "charter-resume-and-declined",
-      "prompt": "Update our guidance; a contributor just added a weekly email digest job under jobs/digest that sends to all customers. The engineering entry point has this marker: contract 0.3.0, reviewed 2026-09-02, responsibilities marketing-site complete, saas-product complete, advertising in-progress. Its table records for marketing-site: Health declined, static pages, revisit if a form is added. The site is unchanged and has no form. Advertising has Exposure adopted with a daily spend limit and Authority still open.",
+      "prompt": "Update our guidance; a contributor just added a weekly email digest job under jobs/digest that sends to all customers. The engineering entry point has this marker: version 0.3.0, reviewed 2026-09-02, responsibilities product complete, internal-reporting in-progress. Its table records for product: Health declined for the static marketing pages, revisit if a form is added. The site is unchanged and has no form. Internal reporting has Exposure adopted and Change still open.",
       "checks": [
-        "Do not rerun completed interviews or reopen the declined site health decision, since its revisit condition has not occurred.",
-        "Identify customer email as an unrecorded responsibility or a material extension that needs an owner decision, with its exposure named.",
-        "Do not restart advertising; report its open authority concern as remaining and resume it only within establish scope or on request.",
-        "Keep adopted-but-unimplemented practices distinct from present behavior and route any building to change-scoped work."
+        "Do not reopen the declined health decision, since its revisit condition has not occurred.",
+        "Treat the digest as serving the product responsibility unless the owner says it is a separate objective; name its exposure and return the product to in progress for it.",
+        "Do not restart internal reporting; report its open concern as remaining and resume it only within establish scope or on request.",
+        "Keep adopted-but-unimplemented practices distinct from present behavior and route any building to change-scoped work.",
+        "Add jobs/digest to the component map."
       ]
     },
     {
@@ -77,7 +78,7 @@
         "Leave delivery open or deferred with a revisit condition; do not design or start the replacement.",
         "Mark the retry helpers and the stale pipeline unexamined rather than inferring a convention from them.",
         "Place these standings in the guide beside the billing code and link from the charter.",
-        "Go through all six concerns for the responsibility."
+        "Go through every concern for the responsibility."
       ]
     },
     {
@@ -106,6 +107,17 @@
         "Identify the older installation and unavailable compatibility information.",
         "Preserve the charter and suggest updating the installation.",
         "Continue the independent correction within authority."
+      ]
+    },
+    {
+      "id": "charter-scan-coverage",
+      "prompt": "Establish guidance. Evidence: the repository has 1,400 files. Root documents describe a hosted course platform. Top-level directories are apps/, platform/, course/, extension/, extensions/, examples/, design/, docs/, tests/. One document says deployment is by a release script; another says it is by rsync. You have write authority and delegation is available.",
+      "checks": [
+        "Do not build the charter from the root documents alone; open every top-level directory and descend until each part has one purpose.",
+        "Produce a component map tracing each part to a responsibility, and list anything that serves none for the owner.",
+        "State what was read in full, skimmed, and not opened.",
+        "Raise the contradictory deployment documents with the owner instead of choosing one.",
+        "State responsibilities as business objectives, not as directories."
       ]
     }
   ]

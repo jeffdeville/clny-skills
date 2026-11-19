@@ -34,6 +34,24 @@ Four small clarifications followed Run 2: reconciling a touched responsibility i
 
 Following review of the PR, the charter dropped inference of the owner's familiarity, asks ambition explicitly with revised level definitions, requires a scan before the interview, and gives found practices a standing of endorsed, tolerated, or unexamined. The suite gained one version, a changelog with acceptance criteria, and version-mismatch notification in every skill. Two cases were added for the brownfield and mismatch situations. None of this has been rehearsed. The six concerns are held as a working hypothesis pending an experiment on real repositories, and the PR is held until that is done.
 
+## Trial on four private repositories, 2026-11-19
+
+Method: for each repository, three agents in separate contexts. One used the skill to scan and draft a charter up to the owner's questions. One wrote a free-form standing briefing without seeing the skill. One planned real requested changes from the charter draft and logged each standing fact it needed and where it came from. The owner was absent from all passes. Project details are deliberately not recorded here.
+
+Of 169 standing facts the planners needed, 40 percent were supplied by the charter draft, 31 percent would have arrived once queued owner questions were answered, 15 percent fell under a concern but were neither recorded nor asked, and 14 percent fell under none of the six concerns.
+
+Generalized findings:
+
+- Responsibilities were over-split. Agents proposed 19 across four repositories where a business-objective reading gives about 6, because the definition split by risk surface. Much apparent filler in the concern grid followed from this.
+- Change and Authority gave the same answer in every repository. Exposure carried most distinct content.
+- Recurring facts with no concern: scope and non-goals, promises to those relying on the work, durable state and its recovery, outside obligations, which of several contradictory documents is current, and terms used for more than one thing.
+- The scan was the larger failure. In the two large repositories it read about three and one percent of files, mostly root documents, and the charter omitted whole directories that the planned changes concerned. The experiment prompt and the skill both told the agent to sample.
+- Marking everything unexamined by default hid which written rules bind.
+
+Limits: one run per cell; planners classified their own facts; shallow clones; nothing was executed; the owner set the business-objective definition and confirmed the count for two repositories, the other two counts are the author's estimate, and the individual findings are unchecked.
+
+Changes made in response, none yet rehearsed or retested: responsibilities defined as business objectives; a scan step with a coverage rule and a component map; written rules binding by default and observed practices unexamined by default; concerns revised to Promises, Change, Delivery, Health, State, Dependencies, and Exposure; ambition asked after the scan summary; existing documents linked or moved, never copied.
+
 ## Structural checks
 
 The earlier report incorrectly said all five skill frontmatters parsed. Independent review of 0ada19b reproduced four YAML errors in unquoted descriptions. Other author-reported structural checks at that revision were: every relative Markdown link target exists; the marker example parses as YAML; the case file parses as JSON; no prohibited character; git diff --check clean. These establish structure, not agent behavior.

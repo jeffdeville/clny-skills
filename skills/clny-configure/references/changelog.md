@@ -22,8 +22,9 @@ Blocking: no.
 
 Changed:
 
-- Guidance starts from a repository charter: responsibilities, an ambition level for each, six concerns, and recorded decisions.
-- Practices found in a repository carry a standing of endorsed, tolerated, or unexamined.
+- Guidance starts from a repository charter: responsibilities stated as business objectives, an ambition level for each, a set of concerns, and recorded decisions.
+- A scan produces a skeleton tracing every meaningful path to a responsibility.
+- Written rules are treated as binding; observed practices carry a standing of endorsed, tolerated, or unexamined.
 - The suite has one version and this changelog.
 - Three skills were renamed: `clny-revise-guidance` to `clny-configure`, `clny-interview-owner` to `clny-plan-requirements`, and `clny-infer-intent` to `clny-find-requirements`.
 - Every skill states its workflow and position.
@@ -31,9 +32,10 @@ Changed:
 A configured repository satisfies this version when:
 
 - Its engineering entry point, or the charter document linked from root instructions, carries a charter marker with a whole-charter review date and each responsibility's interview state. Record the satisfied version after verifying these criteria.
-- Every responsibility the evidence shows is listed, and the owner has confirmed the list.
+- Every responsibility is stated as a business objective, and the owner has confirmed the list.
+- The component map traces every path with meaningful content to a responsibility, or the owner has ruled on it.
 - Each responsibility has an ambition level the owner chose.
-- Each of the six concerns has a recorded state for each responsibility, directly or by inheriting a recorded repository default.
+- Each concern in the charter reference has a recorded state for each responsibility, directly or by inheriting a recorded repository default.
 - Practices that bear on a concern are marked endorsed, tolerated, or unexamined in the guide beside the code they belong to.
 - Repository guidance refers to the skills by their current names.
 

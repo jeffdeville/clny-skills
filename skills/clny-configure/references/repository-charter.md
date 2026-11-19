@@ -2,7 +2,7 @@
 
 Read when establishing guidance for a repository, when resuming or revisiting its charter, when the charter marker's version differs from this skill's, or when a change adds, alters, or contradicts a recorded responsibility.
 
-A repository is defined by what it is accountable for, not by a project type. One repository may be a single library. Another may hold a marketing site, a product, and the advertising that drives traffic to both. The charter records those responsibilities and the owner's standing decisions about each. It is the repository's account of its own intent; it is not a product contract for a change.
+A repository is defined by the objectives it serves, not by a project type or its modules. One repository may exist only so that people can book time with its owner. Another may run a course and also host the environments its authors build their own projects in. The charter records those responsibilities and the owner's standing decisions about each. It is the repository's account of its own intent; it is not a product contract for a change.
 
 ## Read the state; do not ask for it
 
@@ -34,12 +34,10 @@ clny_guidance:
   version: "0.3.0"
   reviewed: 2026-11-19
   responsibilities:
-    - id: marketing-site
+    - id: course
       interview: complete
-    - id: saas-product
+    - id: project-hosting
       interview: in-progress
-    - id: advertising
-      interview: pending
 ---
 ```
 
@@ -47,7 +45,7 @@ clny_guidance:
 | --- | --- |
 | version | The suite version, from this skill's frontmatter, that the charter last satisfied. Omit until the first release criteria are satisfied. Retain the last satisfied version during a later migration. |
 | reviewed | Date the whole charter was last reconciled with evidence. Omit until the first whole-charter reconciliation. Retain the previous date during partial work. |
-| responsibilities | Stable identifiers with an interview state. Use pending until the interview starts. Once started, use in-progress while any concern lacks a state or is open. Use complete only when all six are adopted, declined, or deferred, directly or through a recorded default. A completed responsibility that evidence reopens returns to in progress. |
+| responsibilities | Stable identifiers with an interview state. Use pending until the interview starts. Once started, use in-progress while any concern lacks a state or is open. Use complete only when every concern is adopted, declined, or deferred, directly or through a recorded default. A completed responsibility that evidence reopens returns to in progress. |
 
 The marker and the responsibilities table live together on the engineering entry point. Merge the key into any front matter already there. Keep both off the root README, which is the repository's public page, and off the root agent instructions, which are read as instructions. When the index lives inside the root instructions, put the marker and table on a short charter document linked from them, and follow that link when reading the state. Where a small repository has no agent instructions, a pointer from the root README is enough; do not create an instruction file only to hold a pointer. In such a repository one short guidance document is the entry point, the charter, and the guide together.
 
@@ -55,9 +53,19 @@ Once the owner confirms the list, write the clny_guidance mapping with the respo
 
 ## Scan before interviewing
 
-Scan the repository first; many answers are already there. Source, configuration, pipelines, schedules, credentials referenced, external services, and existing documentation usually reveal most responsibilities and much of how each is handled. Label facts that rest only on the owner's description as reports.
+The scan is its own step with its own product: a skeleton that says what each part of the repository is for. Do it before the interview and write it down as you go, so that it survives a long session.
 
-What the scan finds is what exists, not what is wanted. Long-lived repositories accumulate practices nobody chose. Give every found practice that bears on a concern one of three standings, and never promote it on your own:
+**Coverage.** Every path holding meaningful content is traced to the responsibility it serves, or is raised with the owner because it serves none. Generated, vendored, and lock files are named and skipped. State what was read in full, what was skimmed, and what was not opened. Sampling is not coverage: documents describe the repository but are claims to check against the tree, not a substitute for opening it.
+
+**Depth.** Work breadth-first from the root. Descend into a directory until it has one purpose; do not stop at a fixed depth. Decide from what the root shows how to divide the rest. Where fresh delegated contexts are available and permitted, give each a subtree and merge their accounts; otherwise work through the subtrees in turn. Either way the skeleton is the same.
+
+**Product.** The skeleton is the component map the entry point already requires, or a document linked from it in a large repository: each part, what it is for, and the responsibility it serves. It is the route from any file to the guidance that governs it.
+
+The scan separates two kinds of evidence, and they have different defaults.
+
+*Stated rules* are what the owner has written down as intent: agent instructions, dated decisions, policies. Treat them as binding. Confirm them with the owner in one batch rather than one question each.
+
+*Observed practices* are what the code and configuration actually do. They show what exists, not what is wanted; long-lived repositories accumulate practices nobody chose. Give each one that bears on a concern a standing, and never promote it on your own:
 
 | Standing | Meaning |
 | --- | --- |
@@ -65,21 +73,29 @@ What the scan finds is what exists, not what is wanted. Long-lived repositories 
 | Tolerated | In place and known not to be well. Do not copy it as an example, and do not fix it unasked. Record what is wrong as the owner describes it. |
 | Unexamined | Found by the scan; the owner has not spoken to it. The default. Not a precedent. |
 
-Deciding how to repair a tolerated practice is not this interview's work; representing it accurately is. Record standings where the practice lives, in the guide beside the owning code, and let the charter link there. Spend the detail in those guides rather than in the charter. Classify only what bears on the six concerns or what a planner would be likely to copy; leave the rest unexamined and say that it is.
+The interview's main work is the gap between what is and what is wanted. Bring the owner every place where a stated rule contradicts the code, where documents contradict each other, where a path appears dormant, and where one term is used for several things. Record which account is current, and what the owner's terms mean, at the entry point.
+
+Record the current state truthfully, including a migration that is half done and an old path that is still live. The charter does not track the plan for finishing it; the owner reconfigures when the state changes. Deciding how to repair a tolerated practice is not this interview's work; representing it accurately is.
+
+Record standings where the practice lives, in the guide beside the owning code, and let the charter link there. Classify what bears on a concern or what a planner would be likely to copy; leave the rest unexamined and say that it is.
+
+**Existing documents.** The skills can only use what is where they look. When an existing document already answers a concern in a readable form at a stable location, link it. When it does not, restructure it into the guidance by moving it and leaving a pointer behind. Never keep a second copy; two authorities drift apart.
 
 ## Identify the responsibilities
 
 Propose the list from the scan, with the evidence for each entry and what you could not see.
 
-A responsibility is an outcome the repository is accountable for in the world, such as "serves the public marketing site" or "creates, publishes, and adjusts paid advertising". Deployment, observability, and dependency maintenance are concerns that a responsibility raises, not responsibilities. Neither is a directory. New work is a separate responsibility when its exposure or authority answers differ from those of the responsibility it sits beside; otherwise it is a change to that one.
+A responsibility is a business objective: who it is for and what it lets them do, in the words the owner would use with someone outside. "People can book time with me without the back-and-forth" is one. Most repositories have one to three.
 
-Confirming the list is the first charter decision and its own question. Ask for each responsibility's ambition in the same step. Do not put concern-level questions to the owner before the list is answered; showing what the scan found alongside it is fine. State a serious exposure as soon as you find it rather than holding it until its turn. Order the interviews by what is at stake, with anything that spends money, acts on customers, or cannot be undone first. A large repository may nest: a responsibility's guide carries its own table in the same shape.
+Work that exists only to serve an objective belongs to it. Acquiring customers for a product, deploying it, backing it up, and monitoring it are parts of that product's responsibility, however different their code or their risks. A module, a directory, or a risk surface is not a responsibility. Something is a separate responsibility only when the owner would describe it as a different thing the repository exists to do.
 
-When a change has already landed work the charter does not cover, ask only whether the owner intends the repository to carry that responsibility. How it should behave is a question for the change-scoped skills.
+Confirming the list is the first charter decision and its own question. Show the scan's summary with it, and ask for each responsibility's ambition in the same step, so the owner chooses a level knowing what was found. Do not put concern-level questions to the owner before the list is answered. State a serious exposure as soon as you find it rather than holding it until its turn. Order the interviews by what is at stake, with anything that spends money, acts on customers, or cannot be undone first.
+
+When a change has already landed work the charter does not cover, ask whether it serves a recorded responsibility or is a new one the owner intends the repository to carry. How it should behave is a question for the change-scoped skills.
 
 ## Ambition
 
-The owner chooses one level per responsibility, since the answers often differ across one repository.
+The owner chooses one level per responsibility, after seeing the scan's summary.
 
 | Level | Meaning |
 | --- | --- |
@@ -93,22 +109,25 @@ Give every candidate its ongoing cost alongside its benefit, recommend against p
 
 ## Examine the concerns
 
-For each responsibility, go through all six concerns. Bring the scan's answer to each as a finding for the owner to confirm, correct, or give a standing, and ask where the scan found nothing. They are deliberately not specific to software.
+For each responsibility, go through every concern. Bring the scan's answer to each as a finding for the owner to confirm, correct, or give a standing, and ask where the scan found nothing. They are deliberately not specific to software.
 
 | Concern | Question |
 | --- | --- |
-| Change | How does this get changed, by whom, and what review does a change receive? |
+| Promises | What have the people who rely on this been told, and what will it deliberately not do? |
+| Change | How does this get changed, who decides, what review does a change receive, and what may agents or automation do without asking? |
 | Delivery | How does a change reach the place where it takes effect, and what triggers that? |
 | Health | How would anyone know it is working, or that it has stopped? |
-| Dependencies | What does it rely on that changes underneath it, and how is that tracked? |
+| State | What does it hold that must survive, and how is that backed up, restored, retained, and deleted? |
+| Dependencies | What does it rely on that changes underneath it, what do those parties require of it, and how is that tracked? |
 | Exposure | What can it spend, damage, disclose, or commit the owner to? |
-| Authority | Who decides, who may act without asking, and what requires approval? |
 
-For a product these become release, deployment, observability, and dependency updates. For advertising they become campaign edits, publication, spend and performance monitoring, platform policy, budget limits, and approval of creative. Translate the questions into the field's own terms.
+Promises covers scope, invariants, compatibility, service level, and commitments made in public. A complete list of non-goals would be endless, so record only the tempting ones: those the owner has already written down, and those a reasonable contributor or agent would otherwise drift into. Ask what the owner would reject if it were proposed, offer a few candidates from adjacent features, and keep a handful with reasons. Dependencies includes outside obligations such as licences, platform terms, and regulation.
 
-Answer a concern once where responsibilities share it. Record a repository-wide default, such as one delivery pipeline, and let each responsibility inherit it or state its difference.
+Translate each question into the field's own terms. For a hosted product they become compatibility and service level, review and release, deployment, monitoring, backups, upstream updates, and data or spending risk. For advertising they become claims made to audiences, campaign edits and approval, publication, performance monitoring, audience data, platform policy, and budget limits.
 
-These six questions are a working hypothesis. Whether each earns its place and whether together they are sufficient for planning has not yet been established on real repositories.
+One responsibility often has several parts under one concern. Give one answer that names them; a product's exposure may cover the access it holds, its backups, and what its public pages promise. Parts are not further responsibilities. Where responsibilities share an answer, such as one delivery pipeline, record it once and let the other refer to it.
+
+These concerns were revised after one trial on four repositories, which found the original six incomplete and two of them redundant. The revised set has not itself been tested.
 
 ## Research the field for candidates
 
@@ -135,8 +154,8 @@ Summarize in the table beside the marker and keep detail in the linked guides:
 
 | Responsibility | Ambition | Read when | Guide | Decisions |
 | --- | --- | --- | --- | --- |
-| Marketing site | Starter | Changing public pages or their hosting | Site guide | Health declined: static pages, revisit if a form is added |
-| Advertising | Thorough | Changing campaigns, budgets, or creative | Advertising guide | Exposure adopted: daily spend limit. Authority open. Delivery tolerated: see guide. |
+| People can book time with the owner | Starter | Changing booking, hosting, or the public pages | Booking guide | State open: no restore has been tested. Promises adopted: wrap the upstream tool, never fork it. |
+| Learners complete the course | Thorough | Changing lessons, the editor, or enrollment | Course guide | Exposure adopted: learner data stays on the host. Delivery tolerated: see guide. |
 
 This is a shape, not required columns. The decisions cell is a one-line summary: always show open concerns, declined concerns, tolerated practices, and exposures; the rest may live in the guide or the repository default. A revisit condition in the cell is sufficient for most decisions. Use the full freshness fields in [project decisions and revalidation](project-decisions.md) only for consequential, change-sensitive ones. That register holds technical conventions and reflection triggers; the charter holds decisions about responsibilities. Link between them rather than recording a decision twice. Never create an empty guide to fill a cell.
 
