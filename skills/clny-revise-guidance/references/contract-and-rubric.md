@@ -13,7 +13,7 @@ Adapt the path to the repository. A link to a personal filesystem skill is not a
 The index contains:
 
 - A short purpose and scope statement.
-- The charter marker and the responsibilities table, with each responsibility's decisions or a link to them.
+- The charter marker and responsibilities table, or a link to the charter document that holds them.
 - Root architecture guidance, inline when brief or linked when substantial.
 - A component map explaining responsibilities, not just folder names.
 - Links annotated with when to read them, including cross-cutting practices and validation.

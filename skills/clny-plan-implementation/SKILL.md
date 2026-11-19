@@ -2,7 +2,7 @@
 name: clny-plan-implementation
 description: Use when a product contract or agreed feature direction needs a repository-grounded implementation plan with reviewable increments, bounded agent assignments, documentation responsibilities, and validation procedures. Not for the initial product interview, implementing the plan, or a general documentation overhaul.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   status: "draft"
 ---
 
@@ -24,7 +24,7 @@ Inspect existing branches, PRs, reviews, and reported checks when supplied. Plan
 
 Read root instructions and README. Locate the engineering entry point named in root `AGENTS.md` or equivalent instructions; read its root architecture guidance and follow relevant component, coding, documentation, and validation links. Repeat this discovery in each affected repository, including scoped instructions.
 
-Do not assume a fixed path. If the index is missing, inspect existing authoritative guidance and make its location or curation a bounded prerequisite. Apply the `clny-revise-guidance` rubric when available. Its essential checks are discoverability, authority, architectural fidelity, local usefulness, validation usefulness, change coherence, maintainability, and recipient accessibility. A substantial handbook overhaul is explicit prerequisite work, not an implicit expansion of this task. Resolve small factual gaps within scope; surface material contradictions.
+Do not assume a fixed path. If the index is missing, inspect existing authoritative guidance and make its location or curation a bounded prerequisite. Apply the `clny-revise-guidance` rubric when available. Its essential checks are discoverability, authority, architectural fidelity, local usefulness, validation usefulness, change coherence, maintainability, and recipient accessibility. Responsibility coverage belongs to curation: a missing or unfinished repository charter is a gap to report, and a change that would add a responsibility or contradict a recorded charter decision needs that decision reconciled before dependent design is treated as settled. A substantial handbook overhaul is explicit prerequisite work, not an implicit expansion of this task. Resolve small factual gaps within scope; surface material contradictions.
 
 Inspect the surrounding source, configuration, tests, and actual callers/callees. Trace a representative behavior across the necessary boundaries and repositories. Select concrete coding and test exemplars that fit the approved architecture; a legacy violation is not a convention to copy. Separate observed implementation, approved architectural intent, deviations, and proposed changes. Do not silently weaken an architectural rule to match current code.
 

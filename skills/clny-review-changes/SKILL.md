@@ -2,7 +2,7 @@
 name: clny-review-changes
 description: Review an existing PR or proposed code change against established product requirements, repository guidance, documentation, and validation evidence. Does not implement fixes or publish review comments unless separately authorized.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   status: draft
 ---
 
@@ -38,7 +38,7 @@ Check whether applicable guidance is overdue or challenged and whether its reass
 
 Review relevant inline comments/docstrings, component documentation, architectural explanations, and validation instructions against the actual diff and established intent. Name the locations reviewed. Require updates when changed behavior makes them wrong or materially incomplete. Historical ADRs alone are insufficient. Accept a concrete no-edit rationale when existing explanations remain sufficient; never require cosmetic churn.
 
-Treat a consequential documentation discrepancy as a review finding. Do not declare a change ready with such discrepancies unresolved. During read-only review, describe the correction; do not edit documentation implicitly.
+Treat a consequential documentation discrepancy as a review finding. So is a change that gives the repository a responsibility its charter does not record, or that contradicts a recorded charter decision; report it for reconciliation through `clny-revise-guidance`. Do not declare a change ready with such discrepancies unresolved. During read-only review, describe the correction; do not edit documentation implicitly.
 
 ## Report actionable findings and readiness
 

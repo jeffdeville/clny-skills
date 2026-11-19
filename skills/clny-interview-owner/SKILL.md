@@ -2,7 +2,7 @@
 name: clny-interview-owner
 description: Interview the owner to establish new product requirements or resolve consequential behavior choices left by investigation. Reuse existing evidence and decisions; does not infer intent from external reports alone, establish a repository's standing responsibilities, plan implementation, or review a PR.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   status: "draft"
 ---
 

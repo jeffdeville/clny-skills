@@ -20,7 +20,8 @@
       "checks": [
         "Identify the broken implementation link for repair.",
         "Do not demand architecture rewrites or new guides for every directory.",
-        "Explain why other authoritative content remains valid; do not edit in audit mode."
+        "Explain why other authoritative content remains valid; do not edit in audit mode.",
+        "Do not start a charter interview; at most report the absent charter as a gap."
       ]
     },
     {
@@ -39,7 +40,7 @@
       "checks": [
         "Infer the uninitialized state from the evidence; do not ask whether this is a new setup.",
         "Propose three responsibilities as outcomes with evidence, and seek confirmation of the list before deep interviews.",
-        "Treat familiarity and ambition per responsibility: little questioning for the application, a starter level for the site, a wider explained survey for advertising.",
+        "Treat familiarity and ambition per responsibility: little questioning for the application, a starter level for the site, a wider explained survey for advertising; default unstated ambition instead of asking.",
         "Raise unbounded automated spending and missing approval regardless of ambition level, as an exposure for the owner to decide, not a rule already adopted.",
         "Recognize the shared delivery pipeline once instead of asking about it per responsibility.",
         "Present researched practices as candidates with costs and a labeled recommendation; do not write a catalog into guidance or claim owner approval.",
@@ -52,7 +53,7 @@
       "checks": [
         "Do not rerun completed interviews or reopen the declined site health decision, since its revisit condition has not occurred.",
         "Identify customer email as an unrecorded responsibility or a material extension that needs an owner decision, with its exposure named.",
-        "Resume advertising at the open authority concern instead of restarting it.",
+        "Do not restart advertising; report its open authority concern as remaining and resume it only within establish scope or on request.",
         "Keep adopted-but-unimplemented practices distinct from present behavior and route any building to change-scoped work."
       ]
     },
@@ -63,7 +64,8 @@
         "Record a single responsibility without manufacturing others.",
         "Do not recommend deployment, monitoring, or dependency machinery; say plainly where doing nothing is the recommendation.",
         "Still name irreversible loss of files as the one exposure worth a decision.",
-        "Produce a small charter, not a hierarchy of guides."
+        "Produce a small charter, not a hierarchy of guides.",
+        "Record an unanswered recommendation as open, not declined, and do not create an instruction file only to hold a pointer."
       ]
     }
   ]

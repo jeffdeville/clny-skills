@@ -8,11 +8,13 @@ metadata:
 
 # Revise guidance
 
-Make repository engineering guidance discoverable, coherent, and trustworthy for a fresh planner or implementer. Produce a maintained map of authoritative explanations, not a duplicate manual or a README in every directory.
+Make repository guidance discoverable, coherent, and trustworthy for a fresh planner or implementer. Produce a maintained map of authoritative explanations, not a duplicate manual or a README in every directory.
 
 ## Start from the repository's responsibilities
 
-Guidance follows from what the repository is accountable for. Before mapping or filling gaps, read [the repository charter](references/repository-charter.md) and determine the charter's state from the entry point; do not ask the user whether the setup is new. When responsibilities are unrecorded, incomplete, or contradicted by evidence, establish or reconcile them with the owner, one responsibility at a time, calibrated to the owner's familiarity and chosen ambition. A recorded and consistent charter needs no interview.
+Guidance follows from what the repository is accountable for. Look for the charter marker on the engineering entry point to learn the charter's state; do not ask the user whether the setup is new. When establishing guidance, when the owner asks to resume or revisit the charter, or when a change adds, alters, or contradicts a recorded responsibility, read [the repository charter](references/repository-charter.md) and establish or reconcile the affected responsibilities with the owner, one at a time, calibrated to the owner's familiarity and ambition. A recorded and consistent charter needs no interview.
+
+A missing or unfinished charter does not widen a narrower request. When maintaining guidance with a change, or auditing, report the charter's state as a gap and continue the requested work.
 
 The architecture, component, and validation topics below are what software responsibilities usually need. Apply the charter's concerns to other kinds of work in that work's own terms; do not force software headings onto them or skip a responsibility because it is not code.
 
@@ -22,7 +24,7 @@ The architecture, component, and validation topics below are what software respo
 - **Maintain with a change:** trace a proposed or completed change to the explanations, constraints, procedures, and navigation it affects. Keep unrelated documentation out of scope.
 - **Audit only:** report findings and concrete corrections without writing files.
 
-Honor the requested mode and repository boundaries. A charter decision to adopt a practice does not implement it; route that work to the change-scoped skills. Documentation work does not authorize code changes, architecture policy changes, runtime operations, commits, or publication. Reversible documentation edits within the requested scope do not require repeated approval.
+Honor the requested mode and repository boundaries. A charter decision to adopt a practice does not implement it; building it is a new change request for `clny-interview-owner` or `clny-plan-implementation`. Documentation work does not authorize code changes, architecture policy changes, runtime operations, commits, or publication. Reversible documentation edits within the requested scope do not require repeated approval.
 
 Read root instructions and README first. Locate the existing engineering entry point and scoped instructions. Read [the documentation contract and rubric](references/contract-and-rubric.md). Use concise overviews, ownership maps, focused component explanations, and link/diagram checks. Repositories must not depend on a personal skill installation to understand their own rules.
 
@@ -30,7 +32,7 @@ Read root instructions and README first. Locate the existing engineering entry p
 
 Use the engineering entry point identified in root `AGENTS.md` or the repository's equivalent agent instructions. Preserve an existing authoritative location. If none exists, choose a tracked location consistent with repository conventions; `docs/engineering/README.md` is a default, not a mandatory path. Link it from root instructions and the root README when appropriate and authorized. Check ignore rules and reader accessibility before claiming the guidance is distributed.
 
-Keep the index mainly a table of contents with purpose, component responsibilities, and when each link applies. Include or link root architecture guidance. Link substantive component guides near their owning code and cross-cutting practices where they are already maintained. Include a return route from focused guides. Do not duplicate policies, replace the root setup guide with an index, or introduce empty pages just to satisfy a schema.
+Keep the index mainly a table of contents with purpose, component responsibilities, and when each link applies. Charter decisions appear there as one-line summaries linking to their guides. Include or link root architecture guidance. Link substantive component guides near their owning code and cross-cutting practices where they are already maintained. Include a return route from focused guides. Do not duplicate policies, replace the root setup guide with an index, or introduce empty pages just to satisfy a schema.
 
 Follow enough source, configuration, tests, and existing decisions to understand the relevant ownership and behavior. For a broad map, sample meaningful paths and state coverage limits; do not imply every component was audited. Link evidence that helps readers verify consequential claims.
 
@@ -51,7 +53,7 @@ Read [project decisions and revalidation](references/project-decisions.md) when 
 Apply [the shared documentation obligation](../clny-infer-intent/references/intent-contract.md). Explicitly inspect inline comments and docstrings as well as guides. A change cannot be considered ready with inaccurate or materially incomplete affected explanations. ADRs supplement the maintained current account; they do not replace it.
 
 
-For each affected behavior or boundary, identify the authoritative guide and the incoming links that help readers find it. Update component responsibilities, interfaces, invariants, error/recovery behavior, development procedures, and validation guidance where the change makes them inaccurate. Revisit the parent map when ownership or flow changes. A folder edit does not by itself require a documentation edit; explain no-impact conclusions briefly.
+For each affected behavior or boundary, identify the authoritative guide and the incoming links that help readers find it. Update component responsibilities, interfaces, invariants, error/recovery behavior, development procedures, and validation guidance where the change makes them inaccurate. Revisit the parent map when ownership or flow changes. A change that adds a responsibility or contradicts a recorded charter decision is a guidance finding: reconcile that responsibility with the owner rather than documenting it as settled. A folder edit does not by itself require a documentation edit; explain no-impact conclusions briefly.
 
 For proposed changes, label documentation proposals and planned behavior. For completed changes, describe what the source establishes and distinguish deployment or runtime claims that remain unverified. Preserve historical decisions as history while updating the current authoritative account and repairing navigation.
 
@@ -63,4 +65,4 @@ Review the scoped result against the rubric. Check relative paths, heading ancho
 
 For significant structural work, use a fresh-reader navigation rehearsal when available and permitted: provide the entry point and a realistic change, then ask which guidance applies and how to validate it. Otherwise label the exercise a self-review.
 
-Return the canonical entry point, the charter state with any responsibilities still pending or open, what was established or changed, material discrepancies, validation performed, and remaining gaps. For an audit, return a prioritized set of corrections with locations. For implementation planning, provide applicable source links and documentation/validation obligations; the planner owns delivery increments and assignments. Routine implementers can apply the same maintenance rubric without a separate curation pass.
+Return the canonical entry point, the charter state with any responsibilities not yet complete and concerns still open, what was established or changed, material discrepancies, validation performed, and remaining gaps. For an audit, return a prioritized set of corrections with locations. For implementation planning, provide applicable source links and documentation/validation obligations; the planner owns delivery increments and assignments. Routine implementers can apply the same maintenance rubric without a separate curation pass.
