@@ -1,6 +1,6 @@
 ---
 name: clny-interview-owner
-description: Interview the owner to establish new product requirements or resolve consequential behavior choices left by investigation. Reuse existing evidence and decisions; does not infer intent from external reports alone, plan implementation, or review a PR.
+description: Interview the owner to establish new product requirements or resolve consequential behavior choices left by investigation. Reuse existing evidence and decisions; does not infer intent from external reports alone, establish a repository's standing responsibilities, plan implementation, or review a PR.
 metadata:
   version: "0.2.0"
   status: "draft"
@@ -9,6 +9,8 @@ metadata:
 # Interview owner
 
 Develop one evolving product contract the owner can understand and a fresh technical planner can use without the interview transcript. Establish required behavior, scope, constraints, preferences, delegated discretion, and supporting evidence. Technical planning subsequently determines architecture, delivery increments, task assignments, documentation changes, and validation procedures. Investigate facts before asking about them; scale depth to the cost of being wrong.
+
+This skill concerns a change. What the repository is responsible for as a whole, and the owner's standing decisions about each responsibility, belong to the charter interview in `clny-revise-guidance`, which follows the conduct described here.
 
 ## Start from what is already known
 

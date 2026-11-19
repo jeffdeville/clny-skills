@@ -7,14 +7,16 @@ Portable delivery skills for Codex and Claude Code. Investigate intended behavio
 | Skill | Responsibility |
 | --- | --- |
 | `clny-infer-intent` | Investigate reports and existing evidence; distinguish defects, intended behavior, misunderstandings, and unresolved intent. |
-| `clny-interview-owner` | Establish new requirements or resolve remaining product decisions with the owner. |
+| `clny-interview-owner` | Establish new requirements for a change or resolve remaining product decisions with the owner. |
 | `clny-plan-implementation` | Convert established intent into bounded implementation, documentation, and validation work. |
 | `clny-review-changes` | Review an existing change against requirements, engineering guidance, and evidence. |
-| `clny-revise-guidance` | Establish missing guidance or reconcile existing repository and inline explanations. |
+| `clny-revise-guidance` | Establish the charter of what the repository is responsible for; establish missing guidance or reconcile existing repository and inline explanations. |
 
 A request for new product behavior starts with an interview when consequential decisions remain. Established requirements can proceed directly to planning. A bug report starts with investigation and needs an interview only if product decisions remain. A PR with adequate requirements goes directly to review; unclear requirements route through investigation and, when necessary, an interview. These are responsibilities, not five mandatory invocations.
 
 The [shared intent contract](skills/clny-infer-intent/references/intent-contract.md) preserves requirements, discretion, and evidence limits. Every change explicitly reviews affected documentation, including inline explanations. Required corrections accompany the change; a justified no-edit conclusion is valid.
+
+Guidance starts from a [repository charter](skills/clny-revise-guidance/references/repository-charter.md): the responsibilities the repository carries and the owner's recorded decisions about each, including what was declined. The guidance skill reads the charter's state from the repository instead of being told whether a setup is new, and interviews the owner only on the difference.
 
 Project engineering guidance owns reflection triggers and consequential project conventions. Planning exposes structural choices in a brief human proposal, with implementation detail and decision records alongside it. Implementation handoffs require independent review of each bounded increment or PR. Guidance revalidation examines relevant changes since the last supported assessment; use alone does not renew a rule. See the [decision-record contract](skills/clny-plan-implementation/references/decision-records.md) and [revalidation procedure](skills/clny-revise-guidance/references/project-decisions.md).
 

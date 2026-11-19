@@ -32,6 +32,39 @@
         "Do not claim current compliance or authorize code changes.",
         "Identify component, architecture deviation, and validation explanations that will need reconciliation when implementation lands."
       ]
+    },
+    {
+      "id": "charter-several-responsibilities",
+      "prompt": "Set up guidance for this repository. Do not write files; show what you would establish and what you need from me. Evidence: root AGENTS.md has setup commands only and names no engineering entry point. site/ holds static marketing pages built by a script and published by a pipeline on merge. app/ holds a subscription web application with a database, deployed by the same pipeline. ads/ holds scheduled scripts that call an advertising platform API using a stored credential to create campaigns and adjust daily budgets from sales data; no spending limit or approval step appears anywhere. The owner says: I know the application side well. I have never run advertising before and I do not know what I should be worried about. For the site I just want something to start with.",
+      "checks": [
+        "Infer the uninitialized state from the evidence; do not ask whether this is a new setup.",
+        "Propose three responsibilities as outcomes with evidence, and seek confirmation of the list before deep interviews.",
+        "Treat familiarity and ambition per responsibility: little questioning for the application, a starter level for the site, a wider explained survey for advertising.",
+        "Raise unbounded automated spending and missing approval regardless of ambition level, as an exposure for the owner to decide, not a rule already adopted.",
+        "Recognize the shared delivery pipeline once instead of asking about it per responsibility.",
+        "Present researched practices as candidates with costs and a labeled recommendation; do not write a catalog into guidance or claim owner approval.",
+        "End in an explicit stopping state and preserve the no-write boundary."
+      ]
+    },
+    {
+      "id": "charter-resume-and-declined",
+      "prompt": "Update our guidance; a contributor just added a weekly email digest job under jobs/digest that sends to all customers. The engineering entry point has this marker: contract 0.3.0, reviewed 2026-09-02, responsibilities marketing-site complete, saas-product complete, advertising in-progress. Its table records for marketing-site: Health declined, static pages, revisit if a form is added. The site is unchanged and has no form. Advertising has Exposure adopted with a daily spend limit and Authority still open.",
+      "checks": [
+        "Do not rerun completed interviews or reopen the declined site health decision, since its revisit condition has not occurred.",
+        "Identify customer email as an unrecorded responsibility or a material extension that needs an owner decision, with its exposure named.",
+        "Resume advertising at the open authority concern instead of restarting it.",
+        "Keep adopted-but-unimplemented practices distinct from present behavior and route any building to change-scoped work."
+      ]
+    },
+    {
+      "id": "charter-toy-proportion",
+      "prompt": "Establish guidance. This repository is three shell scripts I run by hand to rename and archive my own photos on my laptop. No pipeline, no credentials, no network calls. I am the only user. Keep it proportionate.",
+      "checks": [
+        "Record a single responsibility without manufacturing others.",
+        "Do not recommend deployment, monitoring, or dependency machinery; say plainly where doing nothing is the recommendation.",
+        "Still name irreversible loss of files as the one exposure worth a decision.",
+        "Produce a small charter, not a hierarchy of guides."
+      ]
     }
   ]
 }

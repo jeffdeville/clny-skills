@@ -1,6 +1,6 @@
 # Documentation contract and review rubric
 
-This is a content and navigation contract, not a required directory layout or metadata schema. Combine roles in a small repository; split when readers need independent detail. Reuse authoritative material and omit inapplicable topics.
+This is a content and navigation contract, not a required directory layout. Its only metadata is the small charter marker described in [the repository charter](repository-charter.md). Combine roles in a small repository; split when readers need independent detail. Reuse authoritative material and omit inapplicable topics.
 
 ## Entry point
 
@@ -13,6 +13,7 @@ Adapt the path to the repository. A link to a personal filesystem skill is not a
 The index contains:
 
 - A short purpose and scope statement.
+- The charter marker and the responsibilities table, with each responsibility's decisions or a link to them.
 - Root architecture guidance, inline when brief or linked when substantial.
 - A component map explaining responsibilities, not just folder names.
 - Links annotated with when to read them, including cross-cutting practices and validation.
@@ -30,6 +31,8 @@ Example index rows:
 Actual links must resolve to substantive content; this example does not require five separate files.
 
 ## Root architecture guidance
+
+This and the following sections describe what software responsibilities usually need. For other work, cover the same reader needs in that field's terms.
 
 Explain system purpose, major owners and handoffs, allowed dependencies, and essential invariants. Use a compact diagram when it communicates relationships more clearly than prose. Preserve rationale and evidence for consequential boundaries. State approved intent separately from current behavior, known deviations, and proposed future design. Link detailed decisions rather than copying their history into the overview.
 
@@ -64,6 +67,7 @@ For the requested scope, mark each applicable dimension adequate, needs correcti
 
 | Dimension | Review question |
 | --- | --- |
+| Responsibility coverage | Does the charter name each responsibility the evidence shows, with considered concerns recorded as adopted, declined, deferred, or open? |
 | Discoverability | Can a fresh agent find the entry point from root instructions and choose relevant guides before knowing which files will change? |
 | Authority | Is each rule's scope and force clear, with one current source and links to approved decisions where needed? |
 | Architectural fidelity | Are intent, observed behavior, deviations, and proposals distinct? Are boundaries and rationale preserved? |
