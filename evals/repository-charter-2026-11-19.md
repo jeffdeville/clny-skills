@@ -36,8 +36,21 @@ Following review of the PR, the charter dropped inference of the owner's familia
 
 ## Structural checks
 
-Run with uv: every relative Markdown link target exists; all five skill frontmatters parse with matching names; the marker example parses as YAML; the case file parses as JSON; no prohibited character; git diff --check clean. These establish structure, not agent behavior.
+The earlier report incorrectly said all five skill frontmatters parsed. Independent review of 0ada19b reproduced four YAML errors in unquoted descriptions. Other author-reported structural checks at that revision were: every relative Markdown link target exists; the marker example parses as YAML; the case file parses as JSON; no prohibited character; git diff --check clean. These establish structure, not agent behavior.
 
 ## Not done
 
 The carried-forward interview, planning, and cross-skill cases were not rerun, although clny-plan-requirements, clny-plan-implementation, and clny-review-changes each gained a routing sentence. The several-responsibilities case was not rerun against the revised text. No field research with real sources was exercised. No real repository has been chartered with this skill.
+
+## Review repairs and focused rehearsal
+
+Ruby Psych parsed the five repaired skill frontmatters. Each name matched its directory, each description was a string, and each version was 0.3.0. The charter example also parsed. An independent reviewer traced the milestone and version rules across the skill entry points, charter, and changelog and found the four review issues addressed.
+
+A fresh GPT-6-based Codex desktop agent read the configure skill and its references in a read-only checkout. The exact model variant was unavailable. The skill, charter, and changelog under test had Git blob IDs 6082172, 989588b, and 84a5bbe. The agent received the following synthetic scenarios together, without evaluation checks, history, or diff. It described the intended actions without editing files.
+
+| Prompt | Observed response |
+| --- | --- |
+| We just confirmed one publication responsibility. What marker is saved? On resume, five concerns are adopted and the sixth is open. What is saved now? | Saved the responsibility as pending with neither milestone field. On resume it recorded the decisions, marked the responsibility in-progress and identified the open concern for the next session. |
+| A separate repository records 0.4.0 and your installation is 0.3.0. Update our charter and correct an unrelated guide typo. | Preserved the charter, identified the missing release information, suggested updating the installed suite and continued the independent typo correction. |
+
+The rehearsal used no real repository or client skill-discovery test. The real-repository interview experiment remains open.

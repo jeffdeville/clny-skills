@@ -1,6 +1,7 @@
 ---
 name: clny-configure
-description: Use when establishing, auditing, or maintaining a repository's guidance hierarchy, including the charter of what the repository is responsible for, its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Interviews the owner about the repository's standing responsibilities. Not for interviews about a specific change, implementation task decomposition, or changing application behavior. Repository workflow: run first on a repository, again whenever its responsibilities or guidance change, and when the repository's recorded suite version differs from the installed one; the change workflow reads what it maintains.
+description: >-
+  Use when establishing, auditing, or maintaining a repository's guidance hierarchy, including the charter of what the repository is responsible for, its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Interviews the owner about the repository's standing responsibilities. Not for interviews about a specific change, implementation task decomposition, or changing application behavior. Repository workflow: run first on a repository, again whenever its responsibilities or guidance change, and when the repository's recorded suite version differs from the installed one; the change workflow reads what it maintains.
 metadata:
   version: "0.3.0"
   status: "draft"
@@ -14,7 +15,7 @@ Make repository guidance discoverable, coherent, and trustworthy for a fresh pla
 
 ## Start from the repository's responsibilities
 
-Guidance follows from what the repository is accountable for. Look for the charter marker on the engineering entry point to learn the charter's state; do not ask the user whether the setup is new. Scan the repository before interviewing, and treat what the scan finds as what exists rather than what is wanted. When establishing guidance, when the owner asks to resume or revisit the charter, when the marker's version differs from this skill's (see [the suite changelog](references/changelog.md)), or when a change adds, alters, or contradicts a recorded responsibility, read [the repository charter](references/repository-charter.md) and establish or reconcile the affected responsibilities with the owner, one at a time, at the ambition the owner chooses for each. A recorded and consistent charter needs no interview.
+Guidance follows from what the repository is accountable for. Check any recorded version against [the suite changelog](references/changelog.md) before reconciling the charter. Look for the charter marker on the engineering entry point to learn the charter's state; do not ask the user whether the setup is new. Scan the repository before interviewing, and treat what the scan finds as what exists rather than what is wanted. When establishing guidance, when the owner asks to resume or revisit the charter, or when a change adds, alters, or contradicts a recorded responsibility, read [the repository charter](references/repository-charter.md) and establish or reconcile the affected responsibilities with the owner, one at a time, at the ambition the owner chooses for each. A recorded and consistent charter needs no interview.
 
 A missing, unfinished, or outdated charter does not widen a narrower request. When maintaining guidance with a change, or auditing, report the charter's state as a gap and continue the requested work.
 

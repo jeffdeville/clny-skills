@@ -89,6 +89,24 @@
         "Continue planning the export because the entry is not blocking.",
         "Do not rewrite the marker."
       ]
+    },
+    {
+      "id": "first-charter-interrupted",
+      "prompt": "We confirmed our only responsibility, publishing a weekly bulletin. Show the initial checkpoint. Later we stop after adopting five concerns and leaving authority open. Show what a fresh session resumes.",
+      "checks": [
+        "Initially save the confirmed list as pending without a version or whole-charter review date.",
+        "Record the five decisions and open authority, mark the interview in-progress, and resume that concern.",
+        "Advance historical milestones only on evidence for each."
+      ]
+    },
+    {
+      "id": "installation-older-than-charter",
+      "prompt": "Our engineering entry point records version 0.4.0. Your installed suite is 0.3.0. Update the charter and correct an unrelated typo in a guide.",
+      "checks": [
+        "Identify the older installation and unavailable compatibility information.",
+        "Preserve the charter and suggest updating the installation.",
+        "Continue the independent correction within authority."
+      ]
     }
   ]
 }

@@ -11,11 +11,14 @@ Never require the user to say whether this is a new setup or an update. Find the
 | Observed state | In map-and-establish scope, or when the owner asks |
 | --- | --- |
 | No marker | Treat the charter as empty and establish it. Existing guidance is evidence, not an obstacle. |
+| Marker present without a version | First configuration is underway. Resume from the saved decisions and check the installed release criteria before recording a version. |
 | Responsibilities pending or in progress | Resume them; do not restart completed ones. |
 | Evidence shows an unrecorded or changed responsibility | Reconcile that responsibility only. |
 | Complete and consistent | Proceed with the requested curation. Reopen a decision only when the owner asks or its revisit condition has arrived. |
 | Marker version older than this skill's | Read [the suite changelog](changelog.md). For each entry after the marker's version, check its acceptance criteria against the repository and interview only on those that fail. Record the new version when all are met. |
 | Marker version newer than this skill's | Do not downgrade or rewrite it. Report that the installed skills are older and work within what you can read. |
+
+Check for a newer marker before applying any other row or editing charter data. Follow [the suite changelog](changelog.md) for that case.
 
 Scope still governs. When maintaining guidance with a change, or auditing, do not start or resume a charter interview. Report a missing, unfinished, or outdated charter as a gap, reconcile only a responsibility the change itself touches, and continue the requested work. Reconciling that one responsibility includes its concerns once the owner confirms the repository carries it. When stakes order the work, apply that order across resumed and newly found responsibilities alike.
 
@@ -42,13 +45,13 @@ clny_guidance:
 
 | Field | Meaning |
 | --- | --- |
-| version | The suite version, from this skill's frontmatter, that the charter last satisfied. Copy the current value; the example's number is illustrative. |
-| reviewed | Date the whole charter was last reconciled with evidence. Reconciling one responsibility does not advance it. |
-| responsibilities | Stable identifiers with an interview state. Pending: not started. In progress: at least one concern has no recorded state or is open. Complete: all six concerns have a recorded state. A completed responsibility that evidence reopens returns to in progress. |
+| version | The suite version, from this skill's frontmatter, that the charter last satisfied. Omit until the first release criteria are satisfied. Retain the last satisfied version during a later migration. |
+| reviewed | Date the whole charter was last reconciled with evidence. Omit until the first whole-charter reconciliation. Retain the previous date during partial work. |
+| responsibilities | Stable identifiers with an interview state. Use pending until the interview starts. Once started, use in-progress while any concern lacks a state or is open. Use complete only when all six are adopted, declined, or deferred, directly or through a recorded default. A completed responsibility that evidence reopens returns to in progress. |
 
 The marker and the responsibilities table live together on the engineering entry point. Merge the key into any front matter already there. Keep both off the root README, which is the repository's public page, and off the root agent instructions, which are read as instructions. When the index lives inside the root instructions, put the marker and table on a short charter document linked from them, and follow that link when reading the state. Where a small repository has no agent instructions, a pointer from the root README is enough; do not create an instruction file only to hold a pointer. In such a repository one short guidance document is the entry point, the charter, and the guide together.
 
-Write the marker once the owner confirms the list, with every responsibility pending. The marker records provenance; the repository's guidance must remain understandable without this skill installed.
+Once the owner confirms the list, write the clny_guidance mapping with the responsibilities list and every interview pending. Omit both milestone fields. Set reviewed when reconciliation of the whole charter against evidence finishes. Set version when the repository meets the applicable release criteria. Save interview progress even when neither milestone advances. The marker records provenance; the repository's guidance must remain understandable without this skill installed.
 
 ## Scan before interviewing
 
@@ -137,7 +140,7 @@ Summarize in the table beside the marker and keep detail in the linked guides:
 
 This is a shape, not required columns. The decisions cell is a one-line summary: always show open concerns, declined concerns, tolerated practices, and exposures; the rest may live in the guide or the repository default. A revisit condition in the cell is sufficient for most decisions. Use the full freshness fields in [project decisions and revalidation](project-decisions.md) only for consequential, change-sensitive ones. That register holds technical conventions and reflection triggers; the charter holds decisions about responsibilities. Link between them rather than recording a decision twice. Never create an empty guide to fill a cell.
 
-Update the table after each decided concern so a long interview can stop and resume without loss.
+Update the table and interview state after each concern, including an open one, so a long interview can stop and resume without loss.
 
 ## Conduct and boundaries
 

@@ -4,7 +4,11 @@ The five clny skills share one version, carried in every skill's frontmatter. A 
 
 ## When versions differ
 
-Any skill that reads a charter marker and finds a version different from its own tells the user, summarizes the entries between the two versions, and offers `clny-configure` to bring the repository up to date. It then continues the requested work, unless an entry between the two versions is marked blocking. When the marker is newer than the installed skills, say that the installation is older and do not rewrite the marker.
+Compare the recorded version with the installed suite before applying migration instructions.
+
+- **Repository version is newer.** Report both versions. The older installation lacks the intervening release criteria and blocking decisions. Preserve the charter and suggest updating the installed suite. Continue work independent of those unknown requirements.
+- **Repository version is older.** Summarize the intervening entries and offer `clny-configure` to bring the repository up to date. Continue the request unless an intervening entry is blocking.
+- **Marker present without a version.** First configuration is unfinished. Within configuration scope, resume from the saved decisions and assess the release criteria.
 
 `clny-configure` brings a repository up to date by checking each intervening entry's acceptance criteria against the repository, interviewing the owner only on criteria that fail, and recording the new version when all are met.
 
@@ -26,7 +30,7 @@ Changed:
 
 A configured repository satisfies this version when:
 
-- Its engineering entry point, or the charter document linked from root instructions, carries a charter marker with a version, a review date, and each responsibility's interview state.
+- Its engineering entry point, or the charter document linked from root instructions, carries a charter marker with a whole-charter review date and each responsibility's interview state. Record the satisfied version after verifying these criteria.
 - Every responsibility the evidence shows is listed, and the owner has confirmed the list.
 - Each responsibility has an ambition level the owner chose.
 - Each of the six concerns has a recorded state for each responsibility, directly or by inheriting a recorded repository default.
