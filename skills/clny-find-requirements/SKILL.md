@@ -2,7 +2,7 @@
 name: clny-find-requirements
 description: Investigate reports, repository documentation, historical decisions, or unclear PR requirements to infer existing product intent and identify whether a change is warranted. Does not conduct the owner interview, plan implementation, or review code quality. Change workflow, step 1 when intent must be recovered from evidence; followed by clny-plan-requirements if owner decisions remain, otherwise by planning or review.
 metadata:
-  version: "0.1.2"
+  version: "0.3.0"
   status: draft
 ---
 
@@ -14,7 +14,7 @@ Recover the applicable product requirements from evidence. External reports are 
 
 ## Start with existing evidence
 
-Read the request and linked material, root project instructions and README, then the relevant component guidance, inline explanations, and decisions. Use available connected tools for supplied reports and discussions. Record inaccessible evidence; do not silently substitute guesses. Honor the current scope and permission boundaries.
+Read the request and linked material, root project instructions and README, then the relevant component guidance, inline explanations, and decisions. Use available connected tools for supplied reports and discussions. Record inaccessible evidence; do not silently substitute guesses. Honor the current scope and permission boundaries. If the repository's charter marker names a suite version different from this skill's, follow "When versions differ" in [the suite changelog](../clny-configure/references/changelog.md).
 
 If an existing requirement document adequately establishes intent, authority, and coverage of the requested change, reuse it. Do not repeat an interview or require a new document merely to use this skill.
 

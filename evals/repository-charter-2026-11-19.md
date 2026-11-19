@@ -30,6 +30,10 @@ The independent diff review reported ten findings. The most serious: a repositor
 
 Four small clarifications followed Run 2: reconciling a touched responsibility includes its concerns, a tiny repository may use one document for everything, familiarity is inferred before it is asked, and evidence-settled answers may accompany the list question. One check in the resume case was amended to match the scope rule. These last edits were not rehearsed again.
 
+## Changes after owner review, not rehearsed
+
+Following review of the PR, the charter dropped inference of the owner's familiarity, asks ambition explicitly with revised level definitions, requires a scan before the interview, and gives found practices a standing of endorsed, tolerated, or unexamined. The suite gained one version, a changelog with acceptance criteria, and version-mismatch notification in every skill. Two cases were added for the brownfield and mismatch situations. None of this has been rehearsed. The six concerns are held as a working hypothesis pending an experiment on real repositories, and the PR is held until that is done.
+
 ## Structural checks
 
 Run with uv: every relative Markdown link target exists; all five skill frontmatters parse with matching names; the marker example parses as YAML; the case file parses as JSON; no prohibited character; git diff --check clean. These establish structure, not agent behavior.

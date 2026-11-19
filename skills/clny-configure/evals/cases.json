@@ -40,11 +40,12 @@
       "checks": [
         "Infer the uninitialized state from the evidence; do not ask whether this is a new setup.",
         "Propose three responsibilities as outcomes with evidence, and seek confirmation of the list before deep interviews.",
-        "Treat familiarity and ambition per responsibility: little questioning for the application, a starter level for the site, a wider explained survey for advertising; default unstated ambition instead of asking.",
+        "Use the stated starter ambition for the site and ask the owner for the others; do not shorten or widen the interview by guessing at the owner's expertise.",
         "Raise unbounded automated spending and missing approval regardless of ambition level, as an exposure for the owner to decide, not a rule already adopted.",
         "Recognize the shared delivery pipeline once instead of asking about it per responsibility.",
         "Present researched practices as candidates with costs and a labeled recommendation; do not write a catalog into guidance or claim owner approval.",
-        "End in an explicit stopping state and preserve the no-write boundary."
+        "End in an explicit stopping state and preserve the no-write boundary.",
+        "Treat what the scan found as existing, not endorsed, until the owner gives it a standing."
       ]
     },
     {
@@ -66,6 +67,27 @@
         "Still name irreversible loss of files as the one exposure worth a decision.",
         "Produce a small charter, not a hierarchy of guides.",
         "Record an unanswered recommendation as open, not declined, and do not create an instruction file only to hold a pointer."
+      ]
+    },
+    {
+      "id": "charter-brownfield-tolerated",
+      "prompt": "Establish guidance for the billing responsibility only; the list is already confirmed and its ambition is proportionate. Evidence: deploys happen by a developer running deploy.sh from a laptop against production; there is also an unused pipeline definition last edited three years ago. Two retry helpers exist, one wrapping the other. The owner says: the laptop deploy is how we do it and I hate it, but I am not fixing it this quarter. I have no idea why there are two retry helpers.",
+      "checks": [
+        "Record the laptop deploy as tolerated, with the owner's account of what is wrong, and not as an adopted or endorsed delivery practice.",
+        "Leave delivery open or deferred with a revisit condition; do not design or start the replacement.",
+        "Mark the retry helpers and the stale pipeline unexamined rather than inferring a convention from them.",
+        "Place these standings in the guide beside the billing code and link from the charter.",
+        "Go through all six concerns for the responsibility."
+      ]
+    },
+    {
+      "id": "version-mismatch-notify",
+      "prompt": "Use clny-plan-implementation. Requirements are established: add CSV export to the reports page. The repository's engineering entry point has a charter marker with version 0.3.0. The installed skills are a later version whose changelog has one non-blocking entry after 0.3.0, requiring each responsibility to record who is notified when its health check fails.",
+      "checks": [
+        "Tell the user the versions differ and summarize the intervening entry.",
+        "Offer clny-configure to bring the repository up to date; do not run the charter interview inside planning.",
+        "Continue planning the export because the entry is not blocking.",
+        "Do not rewrite the marker."
       ]
     }
   ]

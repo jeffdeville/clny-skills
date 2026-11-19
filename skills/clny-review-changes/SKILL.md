@@ -2,7 +2,7 @@
 name: clny-review-changes
 description: Review an existing PR or proposed code change against established product requirements, repository guidance, documentation, and validation evidence. Does not implement fixes or publish review comments unless separately authorized. Change workflow, step 4: after a change exists.
 metadata:
-  version: "0.2.1"
+  version: "0.3.0"
   status: draft
 ---
 
@@ -14,7 +14,7 @@ Understand the requirement before judging whether a change satisfies it. Assess 
 
 ## Establish scope and intent
 
-Read the request, PR description, linked requirements, current diff/base/head, existing review context, root instructions, README, and affected guidance. Note the reviewed revisions. Use available repository tools; report missing repositories or access. Review authorization does not itself authorize code edits, external comments, approval, or merge.
+Read the request, PR description, linked requirements, current diff/base/head, existing review context, root instructions, README, and affected guidance. Note the reviewed revisions. Use available repository tools; report missing repositories or access. Review authorization does not itself authorize code edits, external comments, approval, or merge. If the repository's charter marker names a suite version different from this skill's, follow "When versions differ" in [the suite changelog](../clny-configure/references/changelog.md).
 
 Read [the shared intent contract](../clny-find-requirements/references/intent-contract.md). Check whether linked requirements establish applicable intent, decision authority, and coverage of the actual change. If adequate, proceed without another interview or separate intent document.
 

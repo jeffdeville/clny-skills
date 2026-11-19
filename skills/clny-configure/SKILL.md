@@ -1,6 +1,6 @@
 ---
 name: clny-configure
-description: Use when establishing, auditing, or maintaining a repository's guidance hierarchy, including the charter of what the repository is responsible for, its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Interviews the owner about the repository's standing responsibilities. Not for interviews about a specific change, implementation task decomposition, or changing application behavior. Repository workflow: run first on a repository and again whenever its responsibilities or guidance change; the change workflow reads what it maintains.
+description: Use when establishing, auditing, or maintaining a repository's guidance hierarchy, including the charter of what the repository is responsible for, its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Interviews the owner about the repository's standing responsibilities. Not for interviews about a specific change, implementation task decomposition, or changing application behavior. Repository workflow: run first on a repository, again whenever its responsibilities or guidance change, and when the repository's recorded suite version differs from the installed one; the change workflow reads what it maintains.
 metadata:
   version: "0.3.0"
   status: "draft"
@@ -8,15 +8,15 @@ metadata:
 
 # Configure
 
-**Where this fits.** Repository workflow, separate from the change workflow. Run it first on a repository, then again when responsibilities or guidance change. Planning and review read the guidance it maintains and send charter and guidance findings back here.
+**Where this fits.** Repository workflow, separate from the change workflow. Run it first on a repository, then again when responsibilities or guidance change or when the charter marker's version differs from this skill's. Planning and review read the guidance it maintains and send charter and guidance findings back here.
 
 Make repository guidance discoverable, coherent, and trustworthy for a fresh planner or implementer. Produce a maintained map of authoritative explanations, not a duplicate manual or a README in every directory.
 
 ## Start from the repository's responsibilities
 
-Guidance follows from what the repository is accountable for. Look for the charter marker on the engineering entry point to learn the charter's state; do not ask the user whether the setup is new. When establishing guidance, when the owner asks to resume or revisit the charter, or when a change adds, alters, or contradicts a recorded responsibility, read [the repository charter](references/repository-charter.md) and establish or reconcile the affected responsibilities with the owner, one at a time, calibrated to the owner's familiarity and ambition. A recorded and consistent charter needs no interview.
+Guidance follows from what the repository is accountable for. Look for the charter marker on the engineering entry point to learn the charter's state; do not ask the user whether the setup is new. Scan the repository before interviewing, and treat what the scan finds as what exists rather than what is wanted. When establishing guidance, when the owner asks to resume or revisit the charter, when the marker's version differs from this skill's (see [the suite changelog](references/changelog.md)), or when a change adds, alters, or contradicts a recorded responsibility, read [the repository charter](references/repository-charter.md) and establish or reconcile the affected responsibilities with the owner, one at a time, at the ambition the owner chooses for each. A recorded and consistent charter needs no interview.
 
-A missing or unfinished charter does not widen a narrower request. When maintaining guidance with a change, or auditing, report the charter's state as a gap and continue the requested work.
+A missing, unfinished, or outdated charter does not widen a narrower request. When maintaining guidance with a change, or auditing, report the charter's state as a gap and continue the requested work.
 
 The architecture, component, and validation topics below are what software responsibilities usually need. Apply the charter's concerns to other kinds of work in that work's own terms; do not force software headings onto them or skip a responsibility because it is not code.
 
