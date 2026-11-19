@@ -1,5 +1,7 @@
 # Initial evaluation record
 
+Skill names in this record follow the 2026-11-19 renames; the runs used the earlier names clny-revise-guidance and clny-interview-owner.
+
 Date: 2026-11-15. Suite: initial draft before first commit.
 
 Structural checks passed for all five skill frontmatters, local Markdown link targets, JSON case files, absence of personal filesystem paths, and prohibited-character checks. Validation used the local skill-creator validator; that tool is not a runtime dependency of this package.

@@ -1,5 +1,7 @@
 # Project decision rehearsal results — 2026-11-17
 
+Skill names in this record follow the 2026-11-19 renames; the runs used the earlier names clny-revise-guidance and clny-interview-owner.
+
 ## Scope and method
 
 Codex desktop, independent agent contexts; exact model identifier was not exposed in the evaluation output. Candidate revision: branch codex/project-decision-guidance based on 865fe9974cceccc3ab3f7df4eb38996611d717b4, with the changes in this PR. This is a limited synthetic rehearsal, not a production-project trial or cross-client certification.

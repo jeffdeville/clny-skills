@@ -1,12 +1,14 @@
 ---
 name: clny-infer-intent
-description: Investigate reports, repository documentation, historical decisions, or unclear PR requirements to infer existing product intent and identify whether a change is warranted. Does not conduct the owner interview, plan implementation, or review code quality.
+description: Investigate reports, repository documentation, historical decisions, or unclear PR requirements to infer existing product intent and identify whether a change is warranted. Does not conduct the owner interview, plan implementation, or review code quality. Change workflow, step 1 when intent must be recovered from evidence; followed by clny-plan-requirements if owner decisions remain, otherwise by planning or review.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
 ---
 
 # Infer intent
+
+**Where this fits.** Change workflow, step 1 of 4, used only when existing intent has to be recovered from evidence. Next: `clny-plan-requirements` when owner decisions remain; `clny-plan-implementation` for an established correction; `clny-review-changes` for a PR whose requirements turn out adequate.
 
 Recover the applicable product requirements from evidence. External reports are speculative claims, not accepted correction requirements. A reproducible symptom establishes what happens, not what should happen. Do not infer approval from a ticket, PR, proposed fix, or passing test.
 
@@ -37,7 +39,7 @@ Select the conclusion supported by evidence; do not force a fix or a closed disp
 
 ## Hand off residual decisions
 
-This skill does not conduct a product interview. Resolve factual questions through available evidence. When a consequential choice about required behavior remains, carry the findings and smallest unresolved owner question to `clny-interview-owner`. That transition may happen in the same conversation within the user's scope; it does not require a new manual invocation. If that skill is unavailable, provide the bounded question and evidence without pretending the intent is settled.
+This skill does not conduct a product interview. Resolve factual questions through available evidence. When a consequential choice about required behavior remains, carry the findings and smallest unresolved owner question to `clny-plan-requirements`. That transition may happen in the same conversation within the user's scope; it does not require a new manual invocation. If that skill is unavailable, provide the bounded question and evidence without pretending the intent is settled.
 
 For a PR, adequate existing intent lets `clny-review-changes` continue immediately. For an established correction, `clny-plan-implementation` can plan within authorization. Do not turn completion of inference into permission to edit, publish, or deploy.
 

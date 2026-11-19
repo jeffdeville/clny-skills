@@ -4,7 +4,7 @@ Run in fresh contexts with only the supplied evidence, using the named skills. N
 
 ## Changed upstream capability
 
-Use clny-revise-guidance in audit-only mode on 2026-11-17. The engineering index points to docs/engineering/decisions.md. Its recommendation says: "Use the custom charts adapter; the upstream chart library lacks keyboard navigation." Last validated 2026-02-01; revisit 2026-08-01. Project history shows a v3-to-v4 upgrade on September 10. Supplied official v4 release evidence says keyboard navigation is built in. No runtime accessibility checks are supplied. Several later PRs merely say they followed the adapter convention.
+Use clny-configure in audit-only mode on 2026-11-17. The engineering index points to docs/engineering/decisions.md. Its recommendation says: "Use the custom charts adapter; the upstream chart library lacks keyboard navigation." Last validated 2026-02-01; revisit 2026-08-01. Project history shows a v3-to-v4 upgrade on September 10. Supplied official v4 release evidence says keyboard navigation is built in. No runtime accessibility checks are supplied. Several later PRs merely say they followed the adapter convention.
 
 Assess the guidance, identify any proposed update and limits, and state what investigation remains.
 

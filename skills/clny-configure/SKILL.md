@@ -1,12 +1,14 @@
 ---
-name: clny-revise-guidance
-description: Use when establishing, auditing, or maintaining a repository's guidance hierarchy, including the charter of what the repository is responsible for, its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Interviews the owner about the repository's standing responsibilities. Not for interviews about a specific change, implementation task decomposition, or changing application behavior.
+name: clny-configure
+description: Use when establishing, auditing, or maintaining a repository's guidance hierarchy, including the charter of what the repository is responsible for, its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Interviews the owner about the repository's standing responsibilities. Not for interviews about a specific change, implementation task decomposition, or changing application behavior. Repository workflow: run first on a repository and again whenever its responsibilities or guidance change; the change workflow reads what it maintains.
 metadata:
   version: "0.3.0"
   status: "draft"
 ---
 
-# Revise guidance
+# Configure
+
+**Where this fits.** Repository workflow, separate from the change workflow. Run it first on a repository, then again when responsibilities or guidance change. Planning and review read the guidance it maintains and send charter and guidance findings back here.
 
 Make repository guidance discoverable, coherent, and trustworthy for a fresh planner or implementer. Produce a maintained map of authoritative explanations, not a duplicate manual or a README in every directory.
 
@@ -24,7 +26,7 @@ The architecture, component, and validation topics below are what software respo
 - **Maintain with a change:** trace a proposed or completed change to the explanations, constraints, procedures, and navigation it affects. Keep unrelated documentation out of scope.
 - **Audit only:** report findings and concrete corrections without writing files.
 
-Honor the requested mode and repository boundaries. A charter decision to adopt a practice does not implement it; building it is a new change request for `clny-interview-owner` or `clny-plan-implementation`. Documentation work does not authorize code changes, architecture policy changes, runtime operations, commits, or publication. Reversible documentation edits within the requested scope do not require repeated approval.
+Honor the requested mode and repository boundaries. A charter decision to adopt a practice does not implement it; building it is a new change request for `clny-plan-requirements` or `clny-plan-implementation`. Documentation work does not authorize code changes, architecture policy changes, runtime operations, commits, or publication. Reversible documentation edits within the requested scope do not require repeated approval.
 
 Read root instructions and README first. Locate the existing engineering entry point and scoped instructions. Read [the documentation contract and rubric](references/contract-and-rubric.md). Use concise overviews, ownership maps, focused component explanations, and link/diagram checks. Repositories must not depend on a personal skill installation to understand their own rules.
 

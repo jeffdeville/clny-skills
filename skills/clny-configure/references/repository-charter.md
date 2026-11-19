@@ -127,9 +127,9 @@ Update the table after each decided concern so a long interview can stop and res
 
 ## Conduct and boundaries
 
-Conduct the interview as described under "Investigate consequential uncertainty", "Revise and continue", and "Make every yield explicit" in [the owner interview skill](../../clny-interview-owner/SKILL.md), reading "charter" where they say plan or contract. Its product-contract and handoff material does not apply.
+Conduct the interview as described under "Investigate consequential uncertainty", "Revise and continue", and "Make every yield explicit" in [the requirements planning skill](../../clny-plan-requirements/SKILL.md), reading "charter" where they say plan or contract. Its product-contract and handoff material does not apply.
 
-The charter decides what the repository intends; it does not make changes. When the owner adopts something that does not yet exist, record it as adopted and not yet implemented. Building it is a new change request: `clny-interview-owner` when product decisions remain, otherwise `clny-plan-implementation` with the charter entry as its evidence of intent. Do not build it during curation or describe it as present.
+The charter decides what the repository intends; it does not make changes. When the owner adopts something that does not yet exist, record it as adopted and not yet implemented. Building it is a new change request: `clny-plan-requirements` when product decisions remain, otherwise `clny-plan-implementation` with the charter entry as its evidence of intent. Do not build it during curation or describe it as present.
 
 ## Contract changes
 

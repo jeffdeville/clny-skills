@@ -1,16 +1,18 @@
 ---
-name: clny-interview-owner
-description: Interview the owner to establish new product requirements or resolve consequential behavior choices left by investigation. Reuse existing evidence and decisions; does not infer intent from external reports alone, establish a repository's standing responsibilities, plan implementation, or review a PR.
+name: clny-plan-requirements
+description: Interview the owner to establish new product requirements or resolve consequential behavior choices left by investigation. Reuse existing evidence and decisions; does not infer intent from external reports alone, establish a repository's standing responsibilities, plan implementation, or review a PR. Change workflow, step 2: after any evidence investigation and before clny-plan-implementation.
 metadata:
   version: "0.2.1"
   status: "draft"
 ---
 
-# Interview owner
+# Plan requirements
+
+**Where this fits.** Change workflow, step 2 of 4. Before: `clny-infer-intent` when a report or unclear PR needed investigation; otherwise start here for new behavior. Next: `clny-plan-implementation`. Skip this step when requirements are already established.
 
 Develop one evolving product contract the owner can understand and a fresh technical planner can use without the interview transcript. Establish required behavior, scope, constraints, preferences, delegated discretion, and supporting evidence. Technical planning subsequently determines architecture, delivery increments, task assignments, documentation changes, and validation procedures. Investigate facts before asking about them; scale depth to the cost of being wrong.
 
-This skill concerns a change. What the repository is responsible for as a whole, and the owner's standing decisions about each responsibility, belong to the charter interview in `clny-revise-guidance`, which follows the conduct described here.
+This skill concerns a change. What the repository is responsible for as a whole, and the owner's standing decisions about each responsibility, belong to the charter interview in `clny-configure`, which follows the conduct described here.
 
 ## Start from what is already known
 

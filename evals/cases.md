@@ -19,4 +19,4 @@ Also rerun the carried-forward interview and planning cases. Evaluate their orig
 
 Project-owned decision guidance and revalidation cases are in [project-decisions.md](project-decisions.md). A limited Codex rehearsal and independent review are recorded in [the 2026-11-17 results](project-decisions-2026-11-17.md); they do not replace the broader cases above.
 
-Repository charter cases are in [the guidance cases](../skills/clny-revise-guidance/evals/cases.json). A limited Claude Code rehearsal and independent review are recorded in [the 2026-11-19 results](repository-charter-2026-11-19.md).
+Repository charter cases are in [the guidance cases](../skills/clny-configure/evals/cases.json). A limited Claude Code rehearsal and independent review are recorded in [the 2026-11-19 results](repository-charter-2026-11-19.md).

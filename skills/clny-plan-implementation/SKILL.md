@@ -1,6 +1,6 @@
 ---
 name: clny-plan-implementation
-description: Use when a product contract or agreed feature direction needs a repository-grounded implementation plan with reviewable increments, bounded agent assignments, documentation responsibilities, and validation procedures. Not for the initial product interview, implementing the plan, or a general documentation overhaul.
+description: Use when a product contract or agreed feature direction needs a repository-grounded implementation plan with reviewable increments, bounded agent assignments, documentation responsibilities, and validation procedures. Not for the initial product interview, implementing the plan, or a general documentation overhaul. Change workflow, step 3: after requirements are established and before implementation and clny-review-changes.
 metadata:
   version: "0.2.1"
   status: "draft"
@@ -8,15 +8,17 @@ metadata:
 
 # Plan implementation
 
+**Where this fits.** Change workflow, step 3 of 4. Before: established requirements, from `clny-plan-requirements`, `clny-infer-intent`, or an adequate existing document. Next: implementation, which has no skill of its own, then `clny-review-changes` for each increment.
+
 Turn a versioned product contract and repository engineering guidance into a canonical delivery plan a fresh implementer can use. Settle ordinary technical decisions through evidence. Preserve product commitments and delegated discretion. Specify enough to coordinate outcomes, boundaries, interfaces, and verification without prescribing every coding move.
 
 ## Establish input and authority
 
-Read the established intent record or canonical product contract and its exact revision, approval status, rationale, evidence, exclusions, conditional preferences, and delegated choices. A contract produced by `clny-interview-owner` is a suitable input, but that skill is not required. Use equivalent supplied direction; do not rerun a settled product interview. If a missing decision blocks a consequential design choice, investigate what evidence can settle before asking the owner.
+Read the established intent record or canonical product contract and its exact revision, approval status, rationale, evidence, exclusions, conditional preferences, and delegated choices. A contract produced by `clny-plan-requirements` is a suitable input, but that skill is not required. Use equivalent supplied direction; do not rerun a settled product interview. If a missing decision blocks a consequential design choice, investigate what evidence can settle before asking the owner.
 
 Record the authorized stage. Planning, saving a plan, approving product behavior, implementing, and deploying are distinct actions. Continue all useful authorized planning; do not dispatch implementation workers or change application behavior merely because the plan is ready. Preserve explicit read-only boundaries. A later "proceed" continues the authorized stage unless the user clearly expands it.
 
-Read [the shared intent contract](../clny-infer-intent/references/intent-contract.md). Established intent may come from an interview or evidence-based investigation. A ticket labeled Bug is not an accepted requirement. Use `clny-infer-intent` for unresolved factual intent and `clny-interview-owner` for residual product choices; reuse adequate prior work.
+Read [the shared intent contract](../clny-infer-intent/references/intent-contract.md). Established intent may come from an interview or evidence-based investigation. A ticket labeled Bug is not an accepted requirement. Use `clny-infer-intent` for unresolved factual intent and `clny-plan-requirements` for residual product choices; reuse adequate prior work.
 
 Inspect existing branches, PRs, reviews, and reported checks when supplied. Plan remaining work rather than duplicating existing implementations. Verify their relevance to current source and distinguish reported historical checks from current evidence.
 
@@ -24,7 +26,7 @@ Inspect existing branches, PRs, reviews, and reported checks when supplied. Plan
 
 Read root instructions and README. Locate the engineering entry point named in root `AGENTS.md` or equivalent instructions; read its root architecture guidance and follow relevant component, coding, documentation, and validation links. Repeat this discovery in each affected repository, including scoped instructions.
 
-Do not assume a fixed path. If the index is missing, inspect existing authoritative guidance and make its location or curation a bounded prerequisite. Apply the `clny-revise-guidance` rubric when available. Its essential checks are discoverability, authority, architectural fidelity, local usefulness, validation usefulness, change coherence, maintainability, and recipient accessibility. Responsibility coverage belongs to curation: a missing or unfinished repository charter is a gap to report, and a change that would add a responsibility or contradict a recorded charter decision needs that decision reconciled before dependent design is treated as settled. A substantial handbook overhaul is explicit prerequisite work, not an implicit expansion of this task. Resolve small factual gaps within scope; surface material contradictions.
+Do not assume a fixed path. If the index is missing, inspect existing authoritative guidance and make its location or curation a bounded prerequisite. Apply the `clny-configure` rubric when available. Its essential checks are discoverability, authority, architectural fidelity, local usefulness, validation usefulness, change coherence, maintainability, and recipient accessibility. Responsibility coverage belongs to curation: a missing or unfinished repository charter is a gap to report, and a change that would add a responsibility or contradict a recorded charter decision needs that decision reconciled before dependent design is treated as settled. A substantial handbook overhaul is explicit prerequisite work, not an implicit expansion of this task. Resolve small factual gaps within scope; surface material contradictions.
 
 Inspect the surrounding source, configuration, tests, and actual callers/callees. Trace a representative behavior across the necessary boundaries and repositories. Select concrete coding and test exemplars that fit the approved architecture; a legacy violation is not a convention to copy. Separate observed implementation, approved architectural intent, deviations, and proposed changes. Do not silently weaken an architectural rule to match current code.
 
@@ -44,7 +46,7 @@ Preserve "I don't care" as delegation. Do not convert a convenient implementatio
 
 ## Make consequential choices visible
 
-Read [the decision-record contract](references/decision-records.md). Discover project-owned reflection triggers and assess applicable overdue or challenged guidance through [the revalidation procedure](../clny-revise-guidance/references/project-decisions.md). Keep implementation mechanisms distinct from owner requirements. Compare the smallest complete design with proposed additions, describing concrete maintenance obligations and failure tradeoffs rather than abstract reliability preferences.
+Read [the decision-record contract](references/decision-records.md). Discover project-owned reflection triggers and assess applicable overdue or challenged guidance through [the revalidation procedure](../clny-configure/references/project-decisions.md). Keep implementation mechanisms distinct from owner requirements. Compare the smallest complete design with proposed additions, describing concrete maintenance obligations and failure tradeoffs rather than abstract reliability preferences.
 
 Expose every consequential structural addition in the human-facing proposal. Record significant choices and reuse evidence beside the plan; do not bury new architecture in assignments. Resolve ordinary choices independently, and bring only residual consequential tradeoffs outside delegated authority to the owner.
 

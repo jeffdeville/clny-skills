@@ -1,12 +1,14 @@
 ---
 name: clny-review-changes
-description: Review an existing PR or proposed code change against established product requirements, repository guidance, documentation, and validation evidence. Does not implement fixes or publish review comments unless separately authorized.
+description: Review an existing PR or proposed code change against established product requirements, repository guidance, documentation, and validation evidence. Does not implement fixes or publish review comments unless separately authorized. Change workflow, step 4: after a change exists.
 metadata:
   version: "0.2.1"
   status: draft
 ---
 
 # Review changes
+
+**Where this fits.** Change workflow, step 4 of 4. Before: an implemented change or PR. If its requirements are unclear, go back to `clny-infer-intent` and resume here. Findings about guidance or the charter go to `clny-configure`.
 
 Understand the requirement before judging whether a change satisfies it. Assess actual behavior and evidence, not only the diff's style or the author's stated solution.
 
@@ -16,7 +18,7 @@ Read the request, PR description, linked requirements, current diff/base/head, e
 
 Read [the shared intent contract](../clny-infer-intent/references/intent-contract.md). Check whether linked requirements establish applicable intent, decision authority, and coverage of the actual change. If adequate, proceed without another interview or separate intent document.
 
-If intent is missing or disputed, use `clny-infer-intent` to investigate existing evidence. It frames unresolved questions; `clny-interview-owner` handles remaining product decisions. Carry forward context and resume review after resolution. Continue independent technical checks where useful, but do not declare requirement alignment settled while consequential intent is unknown. Do not treat an author's implementation or tests as approval of new behavior.
+If intent is missing or disputed, use `clny-infer-intent` to investigate existing evidence. It frames unresolved questions; `clny-plan-requirements` handles remaining product decisions. Carry forward context and resume review after resolution. Continue independent technical checks where useful, but do not declare requirement alignment settled while consequential intent is unknown. Do not treat an author's implementation or tests as approval of new behavior.
 
 ## Review implementation against the promise
 
@@ -32,13 +34,13 @@ Read [the decision-record contract](../clny-plan-implementation/references/decis
 
 Verify claimed reuse investigations against source. Distinguish owner requirements from implementer mechanisms, assess simpler alternatives, and name concrete maintenance obligations across the cumulative feature or stack. Investigate triggered choices without rationale; do not invent findings merely to fill a checklist. A documented rationale is evidence to challenge, not approval.
 
-Check whether applicable guidance is overdue or challenged and whether its reassessment used actual evidence. Use [the revalidation procedure](../clny-revise-guidance/references/project-decisions.md); in read-only review report required corrections without writing them. Guidance compliance is not sufficient when the rule itself appears inappropriate. Separate implementation defects, missing justification, and proposed guidance corrections. State limits when plan, history, or other repositories are inaccessible.
+Check whether applicable guidance is overdue or challenged and whether its reassessment used actual evidence. Use [the revalidation procedure](../clny-configure/references/project-decisions.md); in read-only review report required corrections without writing them. Guidance compliance is not sufficient when the rule itself appears inappropriate. Separate implementation defects, missing justification, and proposed guidance corrections. State limits when plan, history, or other repositories are inaccessible.
 
 ## Reconcile documentation explicitly
 
 Review relevant inline comments/docstrings, component documentation, architectural explanations, and validation instructions against the actual diff and established intent. Name the locations reviewed. Require updates when changed behavior makes them wrong or materially incomplete. Historical ADRs alone are insufficient. Accept a concrete no-edit rationale when existing explanations remain sufficient; never require cosmetic churn.
 
-Treat a consequential documentation discrepancy as a review finding. So is a change that gives the repository a responsibility its charter does not record, or that contradicts a recorded charter decision; report it for reconciliation through `clny-revise-guidance`. Do not declare a change ready with such discrepancies unresolved. During read-only review, describe the correction; do not edit documentation implicitly.
+Treat a consequential documentation discrepancy as a review finding. So is a change that gives the repository a responsibility its charter does not record, or that contradicts a recorded charter decision; report it for reconciliation through `clny-configure`. Do not declare a change ready with such discrepancies unresolved. During read-only review, describe the correction; do not edit documentation implicitly.
 
 ## Report actionable findings and readiness
 

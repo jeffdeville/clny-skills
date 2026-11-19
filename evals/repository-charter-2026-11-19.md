@@ -1,10 +1,12 @@
 # Repository charter rehearsal results — 2026-11-19
 
+Skill names in this record follow the 2026-11-19 renames; the runs used the earlier names clny-revise-guidance and clny-interview-owner.
+
 ## Scope and method
 
 Claude Code cloud session, independent subagent contexts; the exact model identifier is deliberately not recorded in the repository. Candidate: branch claude/affectionate-rubin-51jo2l based on 307612b, with the charter changes in this PR. This is a limited synthetic rehearsal, not a real-project trial, and it was not run on Codex.
 
-Cases are the three charter cases and the amended small-change case in [the guidance cases](../skills/clny-revise-guidance/evals/cases.json). Each rehearsal agent received the skill path, the scenario prompts, and read-only and no-network limits. Expected checks, the evals directory, the diff, and the design conversation were withheld. Scenarios shared one agent context per run; they were not separately isolated. No repository existed behind any scenario, so every response rested on the supplied description. The checks were written by the same author as the skill change and assessed by that author, which limits their independence.
+Cases are the three charter cases and the amended small-change case in [the guidance cases](../skills/clny-configure/evals/cases.json). Each rehearsal agent received the skill path, the scenario prompts, and read-only and no-network limits. Expected checks, the evals directory, the diff, and the design conversation were withheld. Scenarios shared one agent context per run; they were not separately isolated. No repository existed behind any scenario, so every response rested on the supplied description. The checks were written by the same author as the skill change and assessed by that author, which limits their independence.
 
 A separate agent reviewed the first draft's diff against the agreed requirements and repository rules.
 
@@ -34,4 +36,4 @@ Run with uv: every relative Markdown link target exists; all five skill frontmat
 
 ## Not done
 
-The carried-forward interview, planning, and cross-skill cases were not rerun, although clny-interview-owner, clny-plan-implementation, and clny-review-changes each gained a routing sentence. The several-responsibilities case was not rerun against the revised text. No field research with real sources was exercised. No real repository has been chartered with this skill.
+The carried-forward interview, planning, and cross-skill cases were not rerun, although clny-plan-requirements, clny-plan-implementation, and clny-review-changes each gained a routing sentence. The several-responsibilities case was not rerun against the revised text. No field research with real sources was exercised. No real repository has been chartered with this skill.
