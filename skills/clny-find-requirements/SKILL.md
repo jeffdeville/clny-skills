@@ -1,18 +1,20 @@
 ---
-name: clny-infer-intent
-description: Investigate reports, repository documentation, historical decisions, or unclear PR requirements to infer existing product intent and identify whether a change is warranted. Does not conduct the owner interview, plan implementation, or review code quality.
+name: clny-find-requirements
+description: Investigate reports, repository documentation, historical decisions, or unclear PR requirements to infer existing product intent and identify whether a change is warranted. Does not conduct the owner interview, plan implementation, or review code quality. Change workflow, step 1 when intent must be recovered from evidence; followed by clny-plan-requirements if owner decisions remain, otherwise by planning or review.
 metadata:
-  version: "0.1.0"
+  version: "0.3.0"
   status: draft
 ---
 
-# Infer intent
+# Find requirements
+
+**Where this fits.** Change workflow, step 1 of 4, used only when existing intent has to be recovered from evidence. Next: `clny-plan-requirements` when owner decisions remain; `clny-plan-implementation` for an established correction; `clny-review-changes` for a PR whose requirements turn out adequate.
 
 Recover the applicable product requirements from evidence. External reports are speculative claims, not accepted correction requirements. A reproducible symptom establishes what happens, not what should happen. Do not infer approval from a ticket, PR, proposed fix, or passing test.
 
 ## Start with existing evidence
 
-Read the request and linked material, root project instructions and README, then the relevant component guidance, inline explanations, and decisions. Use available connected tools for supplied reports and discussions. Record inaccessible evidence; do not silently substitute guesses. Honor the current scope and permission boundaries.
+Read the request and linked material, root project instructions and README, then the relevant component guidance, inline explanations, and decisions. Use available connected tools for supplied reports and discussions. Record inaccessible evidence; do not silently substitute guesses. Honor the current scope and permission boundaries. If the repository's charter marker names a suite version different from this skill's, follow "When versions differ" in [the suite changelog](../clny-configure/references/changelog.md).
 
 If an existing requirement document adequately establishes intent, authority, and coverage of the requested change, reuse it. Do not repeat an interview or require a new document merely to use this skill.
 
@@ -37,7 +39,7 @@ Select the conclusion supported by evidence; do not force a fix or a closed disp
 
 ## Hand off residual decisions
 
-This skill does not conduct a product interview. Resolve factual questions through available evidence. When a consequential choice about required behavior remains, carry the findings and smallest unresolved owner question to `clny-interview-owner`. That transition may happen in the same conversation within the user's scope; it does not require a new manual invocation. If that skill is unavailable, provide the bounded question and evidence without pretending the intent is settled.
+This skill does not conduct a product interview. Resolve factual questions through available evidence. When a consequential choice about required behavior remains, carry the findings and smallest unresolved owner question to `clny-plan-requirements`. That transition may happen in the same conversation within the user's scope; it does not require a new manual invocation. If that skill is unavailable, provide the bounded question and evidence without pretending the intent is settled.
 
 For a PR, adequate existing intent lets `clny-review-changes` continue immediately. For an established correction, `clny-plan-implementation` can plan within authorization. Do not turn completion of inference into permission to edit, publish, or deploy.
 

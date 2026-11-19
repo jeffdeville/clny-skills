@@ -1,5 +1,5 @@
 {
-  "skill_name": "clny-interview-owner",
+  "skill_name": "clny-plan-requirements",
   "purpose": "Manual behavioral regression cases for a first draft. Run in fresh contexts with only the stated inputs. Assess actual behavior, not heading or phrase matches. Supply an isolated read-only fixture where named; do not let an evaluation alter real applications.",
   "cases": [
     {

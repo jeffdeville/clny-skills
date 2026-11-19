@@ -2,21 +2,32 @@
 
 Portable delivery skills for Codex and Claude Code. Investigate intended behavior, interview owners when decisions remain, plan implementation, review changes, and maintain the codebase's documented story.
 
-## Skills and routing
+## Workflows and order
+
+There are two workflows. Each skill states its workflow and position at the top.
+
+**Repository workflow.** Run once on a repository, then again when its responsibilities or guidance change.
 
 | Skill | Responsibility |
 | --- | --- |
-| `clny-infer-intent` | Investigate reports and existing evidence; distinguish defects, intended behavior, misunderstandings, and unresolved intent. |
-| `clny-interview-owner` | Establish new requirements or resolve remaining product decisions with the owner. |
-| `clny-plan-implementation` | Convert established intent into bounded implementation, documentation, and validation work. |
-| `clny-review-changes` | Review an existing change against requirements, engineering guidance, and evidence. |
-| `clny-revise-guidance` | Establish missing guidance or reconcile existing repository and inline explanations. |
+| `clny-configure` | Establish the charter of what the repository is responsible for; establish missing guidance or reconcile existing repository and inline explanations. |
 
-A request for new product behavior starts with an interview when consequential decisions remain. Established requirements can proceed directly to planning. A bug report starts with investigation and needs an interview only if product decisions remain. A PR with adequate requirements goes directly to review; unclear requirements route through investigation and, when necessary, an interview. These are responsibilities, not five mandatory invocations.
+**Change workflow.** In this order; skip a step whose output already exists.
 
-The [shared intent contract](skills/clny-infer-intent/references/intent-contract.md) preserves requirements, discretion, and evidence limits. Every change explicitly reviews affected documentation, including inline explanations. Required corrections accompany the change; a justified no-edit conclusion is valid.
+| Step | Skill | Responsibility | Skip when |
+| --- | --- | --- | --- |
+| 1 | `clny-find-requirements` | Investigate reports and existing evidence; distinguish defects, intended behavior, misunderstandings, and unresolved intent. | The request is plainly new behavior, or requirements are already adequate. |
+| 2 | `clny-plan-requirements` | Establish new requirements for a change or resolve remaining product decisions with the owner. | Existing evidence already settles the required behavior. |
+| 3 | `clny-plan-implementation` | Convert established intent into bounded implementation, documentation, and validation work. | Reviewing a change that already exists. |
+| 4 | `clny-review-changes` | Review an existing change against requirements, engineering guidance, and evidence. | Never for an implemented increment or PR. |
 
-Project engineering guidance owns reflection triggers and consequential project conventions. Planning exposes structural choices in a brief human proposal, with implementation detail and decision records alongside it. Implementation handoffs require independent review of each bounded increment or PR. Guidance revalidation examines relevant changes since the last supported assessment; use alone does not renew a rule. See the [decision-record contract](skills/clny-plan-implementation/references/decision-records.md) and [revalidation procedure](skills/clny-revise-guidance/references/project-decisions.md).
+Implementation sits between steps 3 and 4 and has no skill of its own. A request for new behavior starts at step 2 when consequential decisions remain. A bug report starts at step 1 and needs step 2 only if product decisions remain. A PR with adequate requirements goes directly to step 4; unclear requirements send it back to step 1. The change workflow reads the guidance that the repository workflow maintains and returns guidance and charter findings to it.
+
+The [shared intent contract](skills/clny-find-requirements/references/intent-contract.md) preserves requirements, discretion, and evidence limits. Every change explicitly reviews affected documentation, including inline explanations. Required corrections accompany the change; a justified no-edit conclusion is valid.
+
+Guidance starts from a [repository charter](skills/clny-configure/references/repository-charter.md): the business functions the repository carries and the owner's recorded decisions about each, including what was declined. The guidance skill reads the charter's state from the repository instead of being told whether a setup is new, and interviews the owner only on the difference. The five skills share one version. A configured repository records the version it satisfied, and omits that version during first configuration. When the installed suite is newer, skills summarize intervening releases and offer to update the repository. When the repository is newer, they preserve its charter and suggest updating the installation. See the [suite changelog](skills/clny-configure/references/changelog.md). A practice the owner adopts but that does not yet exist is recorded as such and becomes an ordinary change request.
+
+Project engineering guidance owns reflection triggers and consequential project conventions. Planning exposes structural choices in a brief human proposal, with implementation detail and decision records alongside it. Implementation handoffs require independent review of each bounded increment or PR. Guidance revalidation examines relevant changes since the last supported assessment; use alone does not renew a rule. See the [decision-record contract](skills/clny-plan-implementation/references/decision-records.md) and [revalidation procedure](skills/clny-configure/references/project-decisions.md).
 
 ## Install on each computer
 
@@ -59,11 +70,13 @@ for skill in "$PWD"/skills/clny-*; do
 done
 ```
 
-Alternatively copy all five directories into the relevant skills directory; copied installations must be refreshed after updates. Restart the client and verify that all five names appear. In Codex invoke `$clny-infer-intent`; in Claude Code invoke `/clny-infer-intent`. Automatic selection is also allowed.
+Alternatively copy all five directories into the relevant skills directory; copied installations must be refreshed after updates. Restart the client and verify that all five names appear. In Codex invoke `$clny-find-requirements`; in Claude Code invoke `/clny-find-requirements`. Automatic selection is also allowed.
 
 For project-scoped use, copy all five directories into `.agents/skills/` for Codex or `.claude/skills/` for Claude Code, following your repository's policy. Avoid duplicate installations of the same names.
 
 To update a linked installation, run `git pull --ff-only` in this checkout and start a fresh client session. Keep the checkout at the same location or recreate its links. Each computer has its own clone and installation; no private tickets, credentials, or machine settings belong in this repo.
+
+Three skills were renamed on 2026-11-19: `clny-revise-guidance` is now `clny-configure`, `clny-interview-owner` is now `clny-plan-requirements`, and `clny-find-requirements` was `clny-infer-intent`. Remove links to the old names and link the new directories.
 
 This package supersedes the responsibilities of `delivery-product`, `delivery-plan`, and `delivery-guidance`. It does not automatically delete existing installations. After validating the new suite, remove the old copies from discovery to avoid overlapping triggers; retain history in version control rather than keeping compatibility skills.
 
