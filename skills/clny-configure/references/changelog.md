@@ -22,7 +22,7 @@ Blocking: no.
 
 Changed:
 
-- Guidance starts from a repository charter: responsibilities stated as business objectives, an ambition level for each, a set of concerns, and recorded decisions.
+- Guidance starts from a repository charter: responsibilities stated as business functions, an ambition level for each, a set of concerns, and recorded decisions.
 - A scan produces a skeleton tracing every meaningful path to a responsibility.
 - Written rules are treated as binding; observed practices carry a standing of endorsed, tolerated, or unexamined.
 - The suite has one version and this changelog.
@@ -32,8 +32,8 @@ Changed:
 A configured repository satisfies this version when:
 
 - Its engineering entry point, or the charter document linked from root instructions, carries a charter marker with a whole-charter review date and each responsibility's interview state. Record the satisfied version after verifying these criteria.
-- Every responsibility is stated as a business objective, and the owner has confirmed the list.
-- The component map traces every path with meaningful content to a responsibility, or the owner has ruled on it.
+- Every responsibility is stated as a business function, and the owner has confirmed the list.
+- The component map accounts for every part of the repository, traces it to a responsibility or records the owner's ruling, and says whether a guide exists for it.
 - Each responsibility has an ambition level the owner chose.
 - Each concern in the charter reference has a recorded state for each responsibility, directly or by inheriting a recorded repository default.
 - Practices that bear on a concern are marked endorsed, tolerated, or unexamined in the guide beside the code they belong to.

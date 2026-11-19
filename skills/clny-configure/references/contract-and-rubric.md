@@ -67,7 +67,7 @@ For the requested scope, mark each applicable dimension adequate, needs correcti
 
 | Dimension | Review question |
 | --- | --- |
-| Responsibility coverage | Does the charter state each responsibility as an objective, does the component map trace every meaningful path to one, with every concern recorded as adopted, declined, deferred, or open, and found practices marked endorsed, tolerated, or unexamined? |
+| Responsibility coverage | Does the charter state each responsibility as a business function, does the component map account for every part and trace it to one, with every concern recorded as adopted, declined, deferred, or open, and found practices marked endorsed, tolerated, or unexamined? |
 | Discoverability | Can a fresh agent find the entry point from root instructions and choose relevant guides before knowing which files will change? |
 | Authority | Is each rule's scope and force clear, with one current source and links to approved decisions where needed? |
 | Architectural fidelity | Are intent, observed behavior, deviations, and proposals distinct? Are boundaries and rationale preserved? |

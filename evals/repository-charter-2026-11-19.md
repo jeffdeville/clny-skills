@@ -42,15 +42,15 @@ Of 169 standing facts the planners needed, 40 percent were supplied by the chart
 
 Generalized findings:
 
-- Responsibilities were over-split. Agents proposed 19 across four repositories where a business-objective reading gives about 6, because the definition split by risk surface. Much apparent filler in the concern grid followed from this.
+- Responsibilities were over-split. Agents proposed 19 across four repositories where the owner's department test gives about 8, because the definition split by risk surface. Much apparent filler in the concern grid followed from this.
 - Change and Authority gave the same answer in every repository. Exposure carried most distinct content.
 - Recurring facts with no concern: scope and non-goals, promises to those relying on the work, durable state and its recovery, outside obligations, which of several contradictory documents is current, and terms used for more than one thing.
 - The scan was the larger failure. In the two large repositories it read about three and one percent of files, mostly root documents, and the charter omitted whole directories that the planned changes concerned. The experiment prompt and the skill both told the agent to sample.
 - Marking everything unexamined by default hid which written rules bind.
 
-Limits: one run per cell; planners classified their own facts; shallow clones; nothing was executed; the owner set the business-objective definition and confirmed the count for two repositories, the other two counts are the author's estimate, and the individual findings are unchecked.
+Limits: one run per cell; planners classified their own facts; shallow clones; nothing was executed; the owner set the definition, and the per-repository counts under it are the author's estimate, and the individual findings are unchecked.
 
-Changes made in response, none yet rehearsed or retested: responsibilities defined as business objectives; a scan step with a coverage rule and a component map; written rules binding by default and observed practices unexamined by default; concerns revised to Promises, Change, Delivery, Health, State, Dependencies, and Exposure; ambition asked after the scan summary; existing documents linked or moved, never copied.
+Changes made in response, none yet rehearsed or retested: responsibilities defined as business functions by a department test; a scan step that accounts for every part using the cheapest reliable evidence and produces a component map, with detailed guides left to a later pass or to the first change that touches a part; written rules binding by default and observed practices unexamined by default; concerns revised to Promises, Change, Delivery, Health, State, Dependencies, and Exposure; ambition asked after the scan summary; existing documents linked or moved, never copied.
 
 ## Structural checks
 

@@ -2,7 +2,7 @@
 
 Read when establishing guidance for a repository, when resuming or revisiting its charter, when the charter marker's version differs from this skill's, or when a change adds, alters, or contradicts a recorded responsibility.
 
-A repository is defined by the objectives it serves, not by a project type or its modules. One repository may exist only so that people can book time with its owner. Another may run a course and also host the environments its authors build their own projects in. The charter records those responsibilities and the owner's standing decisions about each. It is the repository's account of its own intent; it is not a product contract for a change.
+A repository is defined by the business functions it carries, not by a project type or its modules. One repository may exist only so that people can book time with its owner. Another may hold a product, the marketing site that sells it, and the advertising that brings people to that site. The charter records those responsibilities and the owner's standing decisions about each. It is the repository's account of its own intent; it is not a product contract for a change.
 
 ## Read the state; do not ask for it
 
@@ -34,10 +34,12 @@ clny_guidance:
   version: "0.3.0"
   reviewed: 2026-11-19
   responsibilities:
-    - id: course
+    - id: product
       interview: complete
-    - id: project-hosting
+    - id: marketing
       interview: in-progress
+    - id: advertising
+      interview: pending
 ---
 ```
 
@@ -55,11 +57,17 @@ Once the owner confirms the list, write the clny_guidance mapping with the respo
 
 The scan is its own step with its own product: a skeleton that says what each part of the repository is for. Do it before the interview and write it down as you go, so that it survives a long session.
 
-**Coverage.** Every path holding meaningful content is traced to the responsibility it serves, or is raised with the owner because it serves none. Generated, vendored, and lock files are named and skipped. State what was read in full, what was skimmed, and what was not opened. Sampling is not coverage: documents describe the repository but are claims to check against the tree, not a substitute for opening it.
+**Coverage means accounting, not reading.** Every top-level area, and every part beneath it that has its own purpose, is listed and traced to the responsibility it serves, or raised with the owner because it serves none. Nothing is silently left out. Generated, vendored, and lock files are named and skipped.
 
-**Depth.** Work breadth-first from the root. Descend into a directory until it has one purpose; do not stop at a fixed depth. Decide from what the root shows how to divide the rest. Where fresh delegated contexts are available and permitted, give each a subtree and merge their accounts; otherwise work through the subtrees in turn. Either way the skeleton is the same.
+**Use the cheapest reliable evidence.** Agent instructions, READMEs, manifests, build and pipeline definitions, directory and file names, and a symbol index or language server where one is available will usually say what a part is for without opening its files. Shortcuts and heuristics are expected. Reading every file is not the goal and is not asked.
 
-**Product.** The skeleton is the component map the entry point already requires, or a document linked from it in a large repository: each part, what it is for, and the responsibility it serves. It is the route from any file to the guidance that governs it.
+**Check that the shortcut holds.** Documents are claims. Before relying on one, test it cheaply: do the paths, commands, and components it names exist, and does it predate large changes to what it describes? Where a document passes, trust it for that area. Where it fails, or where an area has no description at all, look inside that area only as far as needed to say what it is for. Record for each area what the account rests on: a current document, names and manifests, or the source itself.
+
+**Depth.** Work breadth-first from the root, and let what the root shows decide how to divide the rest. Go deeper only where a directory mixes purposes or its description failed the check. Where fresh delegated contexts are available and permitted, give each a subtree and merge their accounts; otherwise work through the subtrees in turn.
+
+**Product.** The skeleton is the component map the entry point already requires, or a document linked from it in a large repository: each part, what it is for, the responsibility it serves, and the guide that explains it, or that no guide exists yet. It is the route from any file to the guidance that governs it.
+
+This scan does not write the detailed guidance for each part. That deeper pass is separate: the owner may ask for it for an area, and otherwise it happens when a change first touches a part whose guide is missing or stale, as prerequisite work for that change. The map is what makes the gap visible at that moment.
 
 The scan separates two kinds of evidence, and they have different defaults.
 
@@ -85,13 +93,13 @@ Record standings where the practice lives, in the guide beside the owning code, 
 
 Propose the list from the scan, with the evidence for each entry and what you could not see.
 
-A responsibility is a business objective: who it is for and what it lets them do, in the words the owner would use with someone outside. "People can book time with me without the back-and-forth" is one. Most repositories have one to three.
+A responsibility is a business function the repository carries, stated as who it is for and what it does for them. The test is the department: imagine the owner's work as a company of about fifty people, and ask whether two things would sit in different departments. Product, marketing, sales, and advertising are different responsibilities even when one exists to feed another. If the department picture does not fit, ask whether the owner would name it as a separate role.
 
-Work that exists only to serve an objective belongs to it. Acquiring customers for a product, deploying it, backing it up, and monitoring it are parts of that product's responsibility, however different their code or their risks. A module, a directory, or a risk surface is not a responsibility. Something is a separate responsibility only when the owner would describe it as a different thing the repository exists to do.
+Work that any one department would do for itself belongs to that responsibility. Deploying a product, backing it up, and monitoring it are parts of the product. A module, a directory, or a risk surface is not a responsibility. Most repositories carry one to four.
 
 Confirming the list is the first charter decision and its own question. Show the scan's summary with it, and ask for each responsibility's ambition in the same step, so the owner chooses a level knowing what was found. Do not put concern-level questions to the owner before the list is answered. State a serious exposure as soon as you find it rather than holding it until its turn. Order the interviews by what is at stake, with anything that spends money, acts on customers, or cannot be undone first.
 
-When a change has already landed work the charter does not cover, ask whether it serves a recorded responsibility or is a new one the owner intends the repository to carry. How it should behave is a question for the change-scoped skills.
+When a change has already landed work the charter does not cover, ask whether it belongs to a recorded responsibility or is a new one the owner intends the repository to carry. How it should behave is a question for the change-scoped skills.
 
 ## Ambition
 
@@ -154,8 +162,9 @@ Summarize in the table beside the marker and keep detail in the linked guides:
 
 | Responsibility | Ambition | Read when | Guide | Decisions |
 | --- | --- | --- | --- | --- |
-| People can book time with the owner | Starter | Changing booking, hosting, or the public pages | Booking guide | State open: no restore has been tested. Promises adopted: wrap the upstream tool, never fork it. |
-| Learners complete the course | Thorough | Changing lessons, the editor, or enrollment | Course guide | Exposure adopted: learner data stays on the host. Delivery tolerated: see guide. |
+| Product: customers run their reports | Thorough | Changing the application, its data, or its hosting | Product guide | State open: no restore has been tested. Delivery tolerated: see guide. |
+| Marketing: visitors learn what it does and sign up | Starter | Changing public pages or the sign-up form | Site guide | Health declined: static pages, revisit if the form changes. |
+| Advertising: the right people reach the site | Proportionate | Changing campaigns, budgets, or creative | Advertising guide | Exposure adopted: daily spend limit. Change open. |
 
 This is a shape, not required columns. The decisions cell is a one-line summary: always show open concerns, declined concerns, tolerated practices, and exposures; the rest may live in the guide or the repository default. A revisit condition in the cell is sufficient for most decisions. Use the full freshness fields in [project decisions and revalidation](project-decisions.md) only for consequential, change-sensitive ones. That register holds technical conventions and reflection triggers; the charter holds decisions about responsibilities. Link between them rather than recording a decision twice. Never create an empty guide to fill a cell.
 
