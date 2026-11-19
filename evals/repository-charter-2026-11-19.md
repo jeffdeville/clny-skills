@@ -52,6 +52,20 @@ Limits: one run per cell; planners classified their own facts; shallow clones; n
 
 Changes made in response, none yet rehearsed or retested: responsibilities defined as business functions by a department test; a scan step that accounts for every part using the cheapest reliable evidence and produces a component map, with detailed guides left to a later pass or to the first change that touches a part; written rules binding by default and observed practices unexamined by default; concerns revised to Promises, Change, Delivery, Health, State, Dependencies, and Exposure; ambition asked after the scan summary; existing documents linked or moved, never copied.
 
+## Second trial on the same repositories, 2026-11-19
+
+Charter and planner passes were rerun against the revised skill; the free-form briefings were reused. The owner was again absent.
+
+Of 220 standing facts, 50 percent were supplied by the charter draft (40 before), 29 percent queued (31), 14 percent missed (15), and 7 percent uncovered (14). The second planner prompt could attribute facts to the component map, stated rules, and gaps as well as the concerns, so the two runs are not strictly comparable.
+
+- Agents proposed 11 responsibilities, down from 19, flagging several as uncertain.
+- Every pass listed the parts it could not trace to a responsibility.
+- The large-repository scans again opened about 45 files each and no agent delegated; missed facts did not fall. Accounting by name filed a live part as dormant in one repository.
+- Most supplied facts came from the stated-rules list and the gaps section, few from the concerns.
+- New problems: no test for what counts as a stated rule; Exposure overlapping three other concerns; no concern for verifying a change before release; no home for standings where a part has no guide.
+
+Changes made in response, not retested: a three-part test for stated rules; Exposure narrowed to spending and irreversible harm; a Verification concern; standings recorded in the component map until a guide exists. Large-repository scanning remains an open problem, and no interview with an owner has been run.
+
 ## Structural checks
 
 The earlier report incorrectly said all five skill frontmatters parsed. Independent review of 0ada19b reproduced four YAML errors in unquoted descriptions. Other author-reported structural checks at that revision were: every relative Markdown link target exists; the marker example parses as YAML; the case file parses as JSON; no prohibited character; git diff --check clean. These establish structure, not agent behavior.

@@ -71,7 +71,9 @@ This scan does not write the detailed guidance for each part. That deeper pass i
 
 The scan separates two kinds of evidence, and they have different defaults.
 
-*Stated rules* are what the owner has written down as intent: agent instructions, dated decisions, policies. Treat them as binding. Confirm them with the owner in one batch rather than one question each.
+*Stated rules* are what the owner has written down as intent. A sentence is a stated rule only when all three hold: the owner or someone acting for them wrote it, it is phrased as an instruction or a decision, and it sits in a file meant to instruct, such as agent instructions, a decision record, or a policy. Treat stated rules as binding and confirm them with the owner in one batch, grouped by topic rather than listed sentence by sentence.
+
+Everything else written in the repository is a description. A README line saying what a script does is a claim to check against the code, not a rule. Text a tool generated is not the owner's intent. A promise made to the public, such as a privacy policy, is a finding for the Promises concern. Two stated rules that contradict each other are a gap to bring to the owner; neither binds until the owner says which holds.
 
 *Observed practices* are what the code and configuration actually do. They show what exists, not what is wanted; long-lived repositories accumulate practices nobody chose. Give each one that bears on a concern a standing, and never promote it on your own:
 
@@ -85,7 +87,7 @@ The interview's main work is the gap between what is and what is wanted. Bring t
 
 Record the current state truthfully, including a migration that is half done and an old path that is still live. The charter does not track the plan for finishing it; the owner reconfigures when the state changes. Deciding how to repair a tolerated practice is not this interview's work; representing it accurately is.
 
-Record standings where the practice lives, in the guide beside the owning code, and let the charter link there. Classify what bears on a concern or what a planner would be likely to copy; leave the rest unexamined and say that it is.
+Record standings where the practice lives: in the guide beside the owning code when one exists, and otherwise in that part's row of the component map, moving to the guide when one is written. Let the charter link there. Classify what bears on a concern or what a planner would be likely to copy; leave the rest unexamined and say that it is.
 
 **Existing documents.** The skills can only use what is where they look. When an existing document already answers a concern in a readable form at a stable location, link it. When it does not, restructure it into the guidance by moving it and leaving a pointer behind. Never keep a second copy; two authorities drift apart.
 
@@ -123,19 +125,20 @@ For each responsibility, go through every concern. Bring the scan's answer to ea
 | --- | --- |
 | Promises | What have the people who rely on this been told, and what will it deliberately not do? |
 | Change | How does this get changed, who decides, what review does a change receive, and what may agents or automation do without asking? |
+| Verification | How is a change known to be correct before it takes effect, and what can only be checked by hand? |
 | Delivery | How does a change reach the place where it takes effect, and what triggers that? |
 | Health | How would anyone know it is working, or that it has stopped? |
 | State | What does it hold that must survive, and how is that backed up, restored, retained, and deleted? |
 | Dependencies | What does it rely on that changes underneath it, what do those parties require of it, and how is that tracked? |
-| Exposure | What can it spend, damage, disclose, or commit the owner to? |
+| Exposure | What can it spend, and what harm could it do that cannot be undone? |
 
-Promises covers scope, invariants, compatibility, service level, and commitments made in public. A complete list of non-goals would be endless, so record only the tempting ones: those the owner has already written down, and those a reasonable contributor or agent would otherwise drift into. Ask what the owner would reject if it were proposed, offer a few candidates from adjacent features, and keep a handful with reasons. Dependencies includes outside obligations such as licences, platform terms, and regulation.
+Promises covers scope, invariants, compatibility, service level, and commitments made in public. A complete list of non-goals would be endless, so record only the tempting ones: those the owner has already written down, and those a reasonable contributor or agent would otherwise drift into. Ask what the owner would reject if it were proposed, offer a few candidates from adjacent features, and keep a handful with reasons. Dependencies includes outside obligations such as licences, platform terms, and regulation. Exposure is deliberately narrow: what the responsibility holds belongs under State, what others require of it under Dependencies, and what it has told people under Promises. Do not repeat those answers under Exposure.
 
-Translate each question into the field's own terms. For a hosted product they become compatibility and service level, review and release, deployment, monitoring, backups, upstream updates, and data or spending risk. For advertising they become claims made to audiences, campaign edits and approval, publication, performance monitoring, audience data, platform policy, and budget limits.
+Translate each question into the field's own terms. For a hosted product they become compatibility and service level, review and release, tests and manual checks, deployment, monitoring, backups, upstream updates, and spending or irreversible loss. For advertising they become claims made to audiences, campaign edits and approval, publication, performance monitoring, audience data, platform policy, and budget limits.
 
 One responsibility often has several parts under one concern. Give one answer that names them; a product's exposure may cover the access it holds, its backups, and what its public pages promise. Parts are not further responsibilities. Where responsibilities share an answer, such as one delivery pipeline, record it once and let the other refer to it.
 
-These concerns were revised after one trial on four repositories, which found the original six incomplete and two of them redundant. The revised set has not itself been tested.
+These concerns were revised after two trials on four repositories with the owner absent. The interview itself has not been tested.
 
 ## Research the field for candidates
 
