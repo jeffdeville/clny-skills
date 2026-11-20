@@ -31,8 +31,8 @@ The marker is a small front matter block recording only what a mechanical check 
 ```yaml
 ---
 clny_guidance:
-  version: "0.3.1"
-  reviewed: 2026-11-19
+  version: "0.4.0"
+  reviewed: 2026-11-20
   responsibilities:
     - id: product
       interview: complete
@@ -179,7 +179,7 @@ Save the table and interview state after each concern, including an open one, so
 
 - the next question for the owner;
 - a named blocker, with what is missing and what remains;
-- the charter complete, with what was written and anything still open.
+- the scoped charter complete, after verifying the interview deliverables, with what was written and any remaining implementation or evidence gaps.
 
 Show where the interview stands with each question: the responsibility, the concern, and how many concerns remain. The owner may stop at any time; the saved state makes that safe, so do not stop on their behalf.
 

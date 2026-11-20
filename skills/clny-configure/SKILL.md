@@ -3,7 +3,7 @@ name: clny-configure
 description: >-
   Use when establishing, auditing, or maintaining a repository's guidance hierarchy, including the charter of what the repository is responsible for, its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Interviews the owner about the repository's standing responsibilities. Not for interviews about a specific change, implementation task decomposition, or changing application behavior. Repository workflow: run first on a repository, again whenever its responsibilities or guidance change, and when the repository's recorded suite version differs from the installed one; the change workflow reads what it maintains.
 metadata:
-  version: "0.3.1"
+  version: "0.4.0"
   status: "draft"
 ---
 
@@ -64,8 +64,10 @@ Document missing validation as a specific gap: which behavior cannot yet be demo
 
 ## Verify and hand off
 
-Review the scoped result against the rubric. Check relative paths, heading anchors, incoming links after moves, and consistency of diagrams with the described flow. Render changed diagrams when tooling is available; state when rendering remains unverified. Distinguish commands inspected from commands run and record actual results.
+At apparent interview completion, apply the [deliverables and acceptance criteria](references/contract-and-rubric.md#interview-deliverables-and-acceptance-criteria). Compare each deliverable with owner decisions and evidence, repair gaps within scope, and recheck before declaring completion. Use the [root reachability check](references/contract-and-rubric.md#check-root-reachability) with an independently assembled set of expected guidance files. Review the scoped result against the rubric. Check relative paths, heading anchors, incoming links after moves, and consistency of diagrams with the described flow. Render changed diagrams when tooling is available; state when rendering remains unverified. Distinguish commands inspected from commands run and record actual results.
 
-For significant structural work, use a fresh-reader navigation rehearsal when available and permitted: provide the entry point and a realistic change, then ask which guidance applies and how to validate it. Otherwise label the exercise a self-review.
+When independent review is warranted, ask a fresh reviewer to compare the scoped guidance with the owner's answers and repository evidence. Focus on consequential omissions, unsupported approvals, and decisions whose meaning changed. Resolve findings against those sources and identify self-review when independence was unavailable.
+
+A reader rehearsal is optional. Use it when a changed route or decision could materially affect a contributor. Select a real recent or upcoming task and establish the expected decision and evidence before giving the reader the root document and task. Record what they actually found. File count alone says little about the value of this exercise.
 
 Return the canonical entry point, the charter state with any responsibilities not yet complete and concerns still open, what was established or changed, material discrepancies, validation performed, and remaining gaps. For an audit, return a prioritized set of corrections with locations. For implementation planning, provide applicable source links and documentation/validation obligations; the planner owns delivery increments and assignments. Routine implementers can apply the same maintenance rubric without a separate curation pass.

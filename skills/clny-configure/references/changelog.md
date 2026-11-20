@@ -16,6 +16,14 @@ Compare the recorded version with the installed suite before applying migration 
 
 Every release adds one entry, newest first: the version and date, what changed, whether it is blocking, and acceptance criteria. Criteria are statements about a configured repository that an agent can check and, where they fail, turn into interview questions. A release that asks nothing of configured repositories says so.
 
+## 0.4.0 — 2026-11-20
+
+Blocking: no.
+
+Configure now checks the interview deliverables against owner decisions and repository evidence at closeout. Independent review examines fidelity to those sources. A reader rehearsal is optional when a real task exercises a consequential change.
+
+A configured repository satisfies this update when its scoped guidance meets the [interview deliverable criteria](contract-and-rubric.md#interview-deliverables-and-acceptance-criteria) and each expected guidance file is reachable from its contributor entry point. Assess existing evidence first, repair factual or navigation gaps within scope, and interview only on unresolved owner decisions. The owning component-map row may carry a practice's standing while a guide is missing, as provided in the charter.
+
 ## 0.3.1 — 2026-11-20
 
 Blocking: no.

@@ -3,7 +3,7 @@ name: clny-plan-requirements
 description: >-
   Interview the owner to establish new product requirements or resolve consequential behavior choices left by investigation. Reuse existing evidence and decisions; does not infer intent from external reports alone, establish a repository's standing responsibilities, plan implementation, or review a PR. Change workflow, step 2: after any evidence investigation and before clny-plan-implementation.
 metadata:
-  version: "0.3.1"
+  version: "0.4.0"
   status: "draft"
 ---
 

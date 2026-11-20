@@ -84,3 +84,30 @@ Prioritize incorrect authority or architecture and misleading validation claims,
 An approved guide says only the worker writes report storage. A legacy API handler writes directly, while its README incorrectly claims it never does.
 
 Correct the API description and record the legacy deviation with a source link. Preserve the worker-only architectural rule. Do not rewrite the rule to authorize direct API writes, claim the migration is implemented, or change application code during curation. If migration is proposed later, mark its documentation as proposed until the implementation exists.
+
+## Interview deliverables and acceptance criteria
+
+At apparent completion, compare each applicable deliverable with the scan, the owner's answers, and the guidance a contributor will actually receive. These are content requirements; a small project can satisfy them in one document.
+
+| Deliverable | Evidence that it meets the objective |
+| --- | --- |
+| Map of the repository | Every meaningful area has a purpose, supporting evidence, a responsibility or an owner's ruling, and a guide or a visible guidance gap. Check mixed-purpose and apparently dormant areas against representative evidence. |
+| Responsibility charter | The owner confirmed whom each business function serves, what it does, and its ambition after seeing the scan. A plausible adjacent request can be placed inside or outside the responsibility using the recorded boundaries. |
+| Account of current practice and authority | A contributor can tell what happens today, what binds, what the owner endorses or tolerates, and what remains unexamined. Trace material discrepancies, including partial migrations, to evidence and the owner's ruling or an explicit open question. |
+| Standing decisions | For each responsibility, all eight charter concerns and seriously weighed candidates have dispositions or explicit inherited defaults. Check the recorded decisions against the owner's actual qualifications. Show costs and benefits of candidates and surface serious exposures at every ambition. Adoption identifies a procedure or implementation gap, refusal a reason and revisit condition, deferral a trigger. Unanswered questions stay open. |
+| Discoverable change, operation, and validation guidance | All expected guidance files are reachable from the contributor's root document. The applicable route identifies authority, constraints, procedures, expected evidence and limits, or records the specific missing procedure. Verify distribution to the intended checkout separately. |
+| Resumable completion record | From the saved charter a new session can recover decisions, the next open concern, and any adopted work awaiting implementation. Open concerns keep a responsibility in progress. Whole-charter review date and satisfied suite version each follow their own milestone rules. In read-only work identify what lives only in chat. |
+
+For each criterion give a concrete source or gap. Repair omissions from available evidence, ask the smallest remaining owner question where a decision is needed, and recheck affected criteria. Carry open work forward explicitly. Within an audit or narrow maintenance request, assess only the requested scope.
+
+### Check root reachability
+
+Build the expected set **before crawling** from the scoped component inventory and existing authorities. Reconcile it with guidance created, moved, or designated during this run, including unchanged guides that should remain accessible. Include an expected file even if it is missing. Record intentionally deferred guides as guidance gaps. Extra reachable files are fine.
+
+Run the bundled [guidance checker](../scripts/check_guidance.py) with Python 3.9+ and Pandoc with GFM support. For example, from the configured repository, substituting the installed script location and the actual paths:
+
+```sh
+uv run --no-project /path/to/clny-configure/scripts/check_guidance.py AGENTS.md docs/engineering.md docs/recovery.md
+```
+
+Start at the document contributors actually open, including its link to the engineering index. If all guidance lives in the root document, pass it as both root and expected file. The checker follows local Markdown and HTML hyperlinks through Markdown documents, checks GFM heading fragments and explicit HTML anchors, and reports missing targets and unreachable expected files with a nonzero exit. Leading slashes are repository-relative. Existing directories and non-Markdown files end traversal. External URLs, renderer-specific includes, and fragments inside other file types are outside its coverage. When a repository uses another navigation format or a prerequisite is unavailable, verify that route separately and report the evidence or limitation.
