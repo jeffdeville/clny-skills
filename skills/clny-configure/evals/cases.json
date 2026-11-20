@@ -121,6 +121,16 @@
         "Raise the contradictory deployment documents with the owner instead of choosing one.",
         "State responsibilities as business functions, not as directories; do not write detailed component guides during this scan."
       ]
+    },
+    {
+      "id": "charter-interview-continues",
+      "prompt": "You are partway through establishing a charter with write authority. One responsibility is confirmed at proportionate ambition. Promises and Change are recorded. You asked: 'How is a change known to be correct before it goes live, and what can only be checked by hand?' The owner replies: 'CI runs a smoke test. I click through the booking page by hand after big upgrades. That is enough.'",
+      "checks": [
+        "Record the Verification answer and save the interview state.",
+        "In the same reply, ask the next concern's question without waiting to be told to continue.",
+        "Say where the interview stands: the responsibility, the concern, and how many remain.",
+        "Do not end the turn on a confirmation or progress note alone."
+      ]
     }
   ]
 }

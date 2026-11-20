@@ -3,7 +3,7 @@ name: clny-review-changes
 description: >-
   Review an existing PR or proposed code change against established product requirements, repository guidance, documentation, and validation evidence. Does not implement fixes or publish review comments unless separately authorized. Change workflow, step 4: after a change exists.
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
   status: draft
 ---
 

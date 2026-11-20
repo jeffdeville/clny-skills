@@ -15,3 +15,9 @@ An independent Codex subagent performed a read-only synthetic evaluation of thre
 The evaluator found two wording risks: the README overgeneralized all new requests as requiring an interview, and a handoff reference described every interview result as agreed. Both were corrected to preserve direct planning from adequate requirements and distinguish proposal completeness from approval. This is a synthetic comprehension check, not evidence of reliable behavior in real projects; the delegation case closely resembles an existing reference example.
 
 Still to run: the complete behavioral cases, fresh-session discovery and invocation on both Codex and Claude Code, and real-project trials. No results from the former delivery skills have been claimed as results for this suite.
+
+## Configure closeout and reachability, 2026-11-20
+
+Against the 0.4.0 working tree, the six synthetic CLI cases in [the checker tests](../skills/clny-configure/evals/test_check_guidance.py) passed using Python 3.13 and Pandoc 3.10. They exercise transitive links, a removed incoming link to an unchanged guide, missing files and anchors, HTML navigation, and symlink identity and containment. Running the checker with the Configure skill entry point reached all four expected reference documents and the checker script. The skill-creator validator accepted the Configure metadata.
+
+These checks cover the link checker and skill structure. A real owner interview followed by observation of a contributor using the resulting guidance remains untested.

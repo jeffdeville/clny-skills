@@ -31,8 +31,8 @@ The marker is a small front matter block recording only what a mechanical check 
 ```yaml
 ---
 clny_guidance:
-  version: "0.3.0"
-  reviewed: 2026-11-19
+  version: "0.4.0"
+  reviewed: 2026-11-20
   responsibilities:
     - id: product
       interview: complete
@@ -171,9 +171,17 @@ Summarize in the table beside the marker and keep detail in the linked guides:
 
 This is a shape, not required columns. The decisions cell is a one-line summary: always show open concerns, declined concerns, tolerated practices, and exposures; the rest may live in the guide or the repository default. A revisit condition in the cell is sufficient for most decisions. Use the full freshness fields in [project decisions and revalidation](project-decisions.md) only for consequential, change-sensitive ones. That register holds technical conventions and reflection triggers; the charter holds decisions about responsibilities. Link between them rather than recording a decision twice. Never create an empty guide to fill a cell.
 
-Update the table and interview state after each concern, including an open one, so a long interview can stop and resume without loss.
+Save the table and interview state after each concern, including an open one, so a long interview can be resumed without loss. Saving is not a stopping point: ask the next question in the same reply.
 
 ## Conduct and boundaries
+
+**Run the interview to completion.** The goal of a configuration session is a complete charter: every concern recorded for every responsibility. After the owner answers, record the answer, say in one line what was recorded, and put the next question in the same reply. Never end a turn on a confirmation or a progress note alone, and never wait to be told to continue. A turn ends in exactly one of three ways:
+
+- the next question for the owner;
+- a named blocker, with what is missing and what remains;
+- the scoped charter complete, after verifying the interview deliverables, with what was written and any remaining implementation or evidence gaps.
+
+Show where the interview stands with each question: the responsibility, the concern, and how many concerns remain. The owner may stop at any time; the saved state makes that safe, so do not stop on their behalf.
 
 Conduct the interview as described under "Investigate consequential uncertainty", "Revise and continue", and "Make every yield explicit" in [the requirements planning skill](../../clny-plan-requirements/SKILL.md), reading "charter" where they say plan or contract. Its product-contract and handoff material does not apply.
 

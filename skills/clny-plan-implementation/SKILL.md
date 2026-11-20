@@ -3,7 +3,7 @@ name: clny-plan-implementation
 description: >-
   Use when a product contract or agreed feature direction needs a repository-grounded implementation plan with reviewable increments, bounded agent assignments, documentation responsibilities, and validation procedures. Not for the initial product interview, implementing the plan, or a general documentation overhaul. Change workflow, step 3: after requirements are established and before implementation and clny-review-changes.
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
   status: "draft"
 ---
 
