@@ -16,6 +16,16 @@ Compare the recorded version with the installed suite before applying migration 
 
 Every release adds one entry, newest first: the version and date, what changed, whether it is blocking, and acceptance criteria. Criteria are statements about a configured repository that an agent can check and, where they fail, turn into interview questions. A release that asks nothing of configured repositories says so.
 
+## 0.3.1 — 2026-11-20
+
+Blocking: no.
+
+Changed:
+
+- The charter interview runs to completion. After each answer the skill records it and asks the next question in the same reply.
+
+This release asks nothing of configured repositories. Record 0.3.1 once the 0.3.0 criteria are met.
+
 ## 0.3.0 — 2026-11-19
 
 Blocking: no.
