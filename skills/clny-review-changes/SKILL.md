@@ -3,7 +3,7 @@ name: clny-review-changes
 description: >-
   Review an existing PR or proposed code change against established product requirements, repository guidance, documentation, and validation evidence. Does not implement fixes or publish review comments unless separately authorized. Change workflow, step 4: after a change exists.
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   status: draft
 ---
 
@@ -46,5 +46,7 @@ Treat a consequential documentation discrepancy as a review finding. So is a cha
 ## Report actionable findings and readiness
 
 Lead with concrete findings prioritized by consequence. Each finding identifies the affected location, triggering scenario, expected behavior and basis, actual consequence, and evidence. Distinguish defects from uncertainty, missing validation, and optional suggestions. Avoid invented findings and restating issues already resolved in the reviewed revision.
+
+At final review of every PR or bounded increment, apply the [two reader questions](../clny-find-requirements/references/intent-contract.md#guidance-for-human-oversight-and-editing) to the actual head, including changes that went directly to review. Give a concise human account of what the diff changes and its consequential boundary. Identify the human explanation and editor guidance inspected and give the result for each. Compare affected plan visuals and PR explanations with what was actually implemented; preserve the distinction between proposed and shipped behavior. Trace the editing route to the applicable constraints and verification procedure. A material gap for either reader is a readiness finding. An existing explanation that still answers the question earns a brief no-edit rationale. A PR can supply change-specific context while lasting facts belong in discoverable repository guidance.
 
 Report requirement alignment, implementation validation, documentation reconciliation, and material release/recovery limits. A clean review means no actionable findings within the stated scope and evidence, not proof of production behavior. A review of a new head must reconcile changed code and prior findings before reusing old conclusions. Do not publish or approve a PR unless the user authorized that external action.

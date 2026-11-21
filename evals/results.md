@@ -21,3 +21,13 @@ Still to run: the complete behavioral cases, fresh-session discovery and invocat
 Against the 0.4.0 working tree, the six synthetic CLI cases in [the checker tests](../skills/clny-configure/evals/test_check_guidance.py) passed using Python 3.13 and Pandoc 3.10. They exercise transitive links, a removed incoming link to an unchanged guide, missing files and anchors, HTML navigation, and symlink identity and containment. Running the checker with the Configure skill entry point reached all four expected reference documents and the checker script. The skill-creator validator accepted the Configure metadata.
 
 These checks cover the link checker and skill structure. A real owner interview followed by observation of a contributor using the resulting guidance remains untested.
+
+## Human oversight and editor guidance, 2026-11-20
+
+Three fresh Codex desktop agents exercised the 0.5.0 working-tree instructions in chat with writes and external actions excluded. Individual model variants were unavailable. The two [planning prompts](../skills/clny-plan-implementation/evals/cases.json) covered the reports fixture and the standalone button rename. The third agent received the [direct-to-review bulletin PR scenario](cases.md) with its requirement, reported test result, and two guidance routes.
+
+- For reports, the planner drew the access check branching into denial, worker-owned creation, and authorized readback. It flagged acknowledgement timing as unsettled and tied the agent assignments to the relevant interfaces, documentation, and validation.
+- For the rename, the planner showed the two button states inline, explained that clicking retains the existing behavior, and supplied one bounded assignment. This prompt closely resembles the example in the skill.
+- For the bulletin PR, the reviewer flagged the stale one-approval promise in the human README as a readiness finding and traced the accurate editor guidance to the operations guide and tests.
+
+The five skill manifests passed the skill validator. The guidance checker reached the shared reader criteria from Configure, Plan Implementation, and Review Changes. These synthetic runs exercised inline visuals and a read-only PR review. Rich-media delivery, Claude Code behavior, and human comprehension on real projects remain untested.

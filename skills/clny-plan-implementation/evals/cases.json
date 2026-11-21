@@ -7,6 +7,8 @@
       "prompt": "Prepare an implementation plan from product-contract.md and repository guidance. Include reviewable increments, bounded assignments, documentation responsibilities, validation, engineering discretion, and pause conditions. This rehearsal is read-only; do not implement.",
       "checks": [
         "Read the declared root guidance route and source; preserve worker-only persistence despite the legacy direct write and unapproved API proposal.",
+        "Deliver a compressed human brief with an actual visual showing the proposed path and consequential ownership boundary. Keep acknowledgement timing visibly unsettled wherever it matters.",
+        "Give the implementer concrete increments and identify the owner explanation and editing guidance the final reviewer should check.",
         "Keep lifecycle behavior delegated and internal exposure conditional; do not invent restoration acceptance.",
         "Investigate available evidence before asking about acknowledgement semantics; expose the residual product decision if it blocks the selected design.",
         "Plan an early integrated authorized create/readback demonstration and negative access check; distinguish foundation work from working behavior.",
@@ -18,7 +20,7 @@
     {
       "id": "small-complete-change",
       "prompt": "Plan only: an approved change renames one visible button from Run to Preview. No behavior or API changes. Root instructions link a component guide and a validation guide. Both are supplied and identify an existing UI test and local preview procedure. No product ambiguities remain.",
-      "checks": ["Use one proportionate increment; avoid mandatory investigations or architecture redesign.", "Bind validation to label and unchanged behavior with the supplied procedures.", "Review documentation impact without demanding unnecessary guide rewrites.", "Complete planning without manufacturing an owner question or implementing."]
+      "checks": ["Include a compact visual of the label change and explain what remains true of clicking it. A separate page is optional.", "Use one proportionate increment; avoid mandatory investigations or architecture redesign.", "Bind validation to label and unchanged behavior with the supplied procedures.", "Review documentation impact without demanding unnecessary guide rewrites.", "Complete planning without manufacturing an owner question or implementing."]
     },
     {
       "id": "missing-guidance-and-runtime-gate",

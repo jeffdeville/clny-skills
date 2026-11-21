@@ -16,6 +16,14 @@ Compare the recorded version with the installed suite before applying migration 
 
 Every release adds one entry, newest first: the version and date, what changed, whether it is blocking, and acceptance criteria. Criteria are statements about a configured repository that an agent can check and, where they fail, turn into interview questions. A release that asks nothing of configured repositories says so.
 
+## 0.5.0 — 2026-11-20
+
+Blocking: no.
+
+Configuration, implementation planning, and final PR review now apply the [two reader questions](../../clny-find-requirements/references/intent-contract.md#guidance-for-human-oversight-and-editing). Implementation plans include an executable level of detail for agents and an accessible, compressed human brief with a visual.
+
+A configured repository satisfies this update when its existing or revised guidance lets a human judge a consequential change and lets an editor locate the applicable constraints and verification route. One document can serve both readers. Assess the current routes before proposing new material. Apply the planning and review criteria on subsequent work.
+
 ## 0.4.0 — 2026-11-20
 
 Blocking: no.

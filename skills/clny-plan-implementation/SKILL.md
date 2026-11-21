@@ -3,7 +3,7 @@ name: clny-plan-implementation
 description: >-
   Use when a product contract or agreed feature direction needs a repository-grounded implementation plan with reviewable increments, bounded agent assignments, documentation responsibilities, and validation procedures. Not for the initial product interview, implementing the plan, or a general documentation overhaul. Change workflow, step 3: after requirements are established and before implementation and clny-review-changes.
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   status: "draft"
 ---
 
@@ -72,6 +72,8 @@ Explicitly include inline documentation review in each affected increment. Compl
 ## Consolidate and check readiness
 
 Maintain one canonical implementation plan in the project's existing planning location, with its own revision and a binding to the product contract revision. Save within authorized scope; verify links, recipient access, and ignore/worktree constraints. Supply accessible copies with canonical origin when needed. Do not claim local ignored files will reach another checkout. If saving is explicitly forbidden, deliver a clearly labeled chat proposal and identify persistence needed before formal handoff.
+
+Deliver the detailed agent plan together with the compressed human brief and its actual visual. Apply the [plan completion criteria](references/plan-and-assignments.md#fresh-reader-rehearsal-and-completion) to both before handoff. Include acceptance criteria for each increment showing how its final reviewer will verify [guidance for both readers](../clny-find-requirements/references/intent-contract.md#guidance-for-human-oversight-and-editing).
 
 Check every required outcome has planned completion evidence and every proposed assignment has clear authority, dependencies, and pause conditions. Distinguish ready assignments from ones gated by owner decisions, feasibility, or access. Do not mark the whole feature ready just because one investigation is executable. When useful and permitted, rehearse one consequential brief with a fresh reader using the plan and source evidence, not the interview transcript or expected answer. Otherwise label a self-review.
 
