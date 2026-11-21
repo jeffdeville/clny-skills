@@ -23,3 +23,12 @@ During exploration the record may live in chat. Before a fresh-agent handoff, pe
 Every proposed or completed code change must explicitly review affected codebase documentation, including inline comments/docstrings, component guides, and relevant parent explanations. Identify the locations reviewed. Update inaccurate or materially incomplete explanations alongside the change. ADRs preserve history but do not replace the current account. Mark future behavior as proposed until implemented; do not claim deployment from source inspection.
 
 A change is not ready while affected documentation contradicts or fails to explain required behavior or consequential constraints. If existing documentation is sufficient, record a brief, concrete no-edit rationale. Do not require cosmetic edits, a README per folder, or an unrelated handbook overhaul.
+
+### Guidance for human oversight and editing
+
+For the affected work, answer two questions from the available guidance:
+
+- Can the person overseeing the work explain its purpose, what changes for people relying on it, and the consequential boundary or choice they may need to judge?
+- Can an editor find the authoritative constraints, affected components, and checks needed to make and verify this change?
+
+Use the entry points each reader actually starts from. A short README overview and root agent instructions leading to focused guides are a useful default when the jobs differ. A small repository can serve both from one entry point. Keep shared rules in one authoritative location. Add a human overview or move detailed procedures closer to their owner when an actual reader question is hard to answer. File count and length alone do not establish a gap.

@@ -31,7 +31,7 @@ The marker is a small front matter block recording only what a mechanical check 
 ```yaml
 ---
 clny_guidance:
-  version: "0.4.0"
+  version: "0.5.0"
   reviewed: 2026-11-20
   responsibilities:
     - id: product

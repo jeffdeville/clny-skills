@@ -4,7 +4,11 @@ Use descriptive behavior titles. These are content requirements, not a fixed num
 
 ## Human proposal and agent detail
 
-Start with a concise human-facing proposal, approximately one screen: user outcome, a compact flow diagram when useful, existing components reused, every consequential structural addition and its reason, unresolved choices, and current status. Link detailed implementation slices and the selective decision log. Detail expands the same design; it must not introduce hidden structural choices.
+Deliver two views of the same plan revision. The detailed plan equips an agent to execute and verify each increment. Lead with a compressed human brief that stands on its own, usually about one screen. Show the user outcome, how the proposed change works, what it reuses or adds, the consequential choice and why it matters, and what is ready or still needs a decision. Link to the detailed increments and decisions. Preserve qualifications when compressing.
+
+Include an actual visual in every human brief. Choose the simplest form that answers the reader's question. For a button rename, `[ Run ] → [ Preview ]` with a caption explaining what clicking still does can be the whole illustration. For a change in who approves publication, draw the proposed path and label where approval happens. For a sequence with overlapping retries or a concept the reader needs to explore, deliver an animation or a self-contained HTML walkthrough when motion or interaction clarifies it. An analogy can introduce an unfamiliar mechanism; connect it to the actual components. Give the visual a short textual takeaway.
+
+Inspect the visual in its intended medium, exercise any interaction it relies on, and confirm it agrees with the agent plan about ordering, ownership, and uncertainty. When rendering is unavailable, provide a readable inline equivalent and state the verification limit. Put the brief and any richer media where the intended reviewer can open them, including when the authorized delivery is chat only.
 
 A useful layout is plans/<initiative>/README.md, implementation.md, and decisions.md. Adapt to existing conventions and combine for small work. Preserve one canonical source for each fact rather than duplicate accounts. Use [the decision-record contract](decision-records.md).
 
@@ -68,6 +72,8 @@ Ask the reader what they would implement, leave out, validate, document, decide 
 
 Before declaring the requested planning stage complete, verify that:
 
+- The human brief and its visual are delivered and accessible. A reader can identify the outcome, consequential change, and any decision needed without reading the assignments. Compare both views to the same plan revision.
+- Each increment names the human-facing explanation and the editor guidance to inspect, the specific update or reason each can remain as written, and how final review will verify both against what ships.
 - Every required outcome has planned evidence; no incidental preference has become an unconditional promise.
 - Dependencies and decision gates are explicit, with no assignment pretending an unknown capability exists.
 - The first meaningful integrated outcome is visible, or the reason it must wait is explained.

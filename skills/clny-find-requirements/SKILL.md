@@ -2,7 +2,7 @@
 name: clny-find-requirements
 description: Investigate reports, repository documentation, historical decisions, or unclear PR requirements to infer existing product intent and identify whether a change is warranted. Does not conduct the owner interview, plan implementation, or review code quality. Change workflow, step 1 when intent must be recovered from evidence; followed by clny-plan-requirements if owner decisions remain, otherwise by planning or review.
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   status: draft
 ---
 
