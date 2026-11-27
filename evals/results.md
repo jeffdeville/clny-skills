@@ -31,3 +31,9 @@ Three fresh Codex desktop agents exercised the 0.5.0 working-tree instructions i
 - For the bulletin PR, the reviewer flagged the stale one-approval promise in the human README as a readiness finding and traced the accurate editor guidance to the operations guide and tests.
 
 The five skill manifests passed the skill validator. The guidance checker reached the shared reader criteria from Configure, Plan Implementation, and Review Changes. These synthetic runs exercised inline visuals and a read-only PR review. Rich-media delivery, Claude Code behavior, and human comprehension on real projects remain untested.
+
+### Direct routing and optional review receipts, 0.6.0 (2026-11-27)
+
+One fresh Codex subagent read the candidate README, shared contract and review skill. Asked how to handle a read-only function question, a named typo, a disputed existing rule, an unresolved product choice, and an existing PR with adequate requirements, it chose direct explanation, direct edit plus verification, requirements investigation, owner interview, and direct review respectively. It preserved review for a typo submitted as a PR. This tests interpretation from supplied documents. Skill discovery and Claude Code were untested.
+
+The executable Git fixture covers a local documentation exemption, a sensitive change before and after review, a new commit carrying a copied receipt, a hidden gitlink, a backwards branch update and a global allowlist. The latter three cases came from independent review.

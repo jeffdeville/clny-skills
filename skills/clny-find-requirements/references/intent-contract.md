@@ -1,5 +1,9 @@
 # Shared intent contract
 
+## Choose the smallest useful next step
+
+Answer a question or report read-only research directly. A specific, authorized, low-risk edit with settled intent can go straight to implementation and proportionate verification. Recover disputed existing intent with `clny-find-requirements`. Take unresolved product choices to `clny-plan-requirements`. Use `clny-plan-implementation` when a delivery decision needs planning. Review an existing PR against adequate requirements immediately. Reuse the same agreement as work moves between stages. An unrelated question on the same branch needs no new intent record.
+
 Use this contract across inference, interviews, planning, and review. A small change can fit in a paragraph. Reuse an adequate existing document; do not create a second authority. An intent record may be embedded in the canonical plan. A product contract produced by an interview is one form of this record.
 
 Include only what matters:

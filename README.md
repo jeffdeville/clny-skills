@@ -12,14 +12,14 @@ There are two workflows. Each skill states its workflow and position at the top.
 | --- | --- |
 | `clny-configure` | Establish the charter of what the repository is responsible for; establish missing guidance or reconcile existing repository and inline explanations. |
 
-**Change workflow.** In this order; skip a step whose output already exists.
+**Change workflow.** Start at the first unresolved decision. Answer read-only questions directly. A small authorized edit with settled intent can proceed directly to implementation and proportionate verification. See the [routing guidance](skills/clny-find-requirements/references/intent-contract.md#choose-the-smallest-useful-next-step).
 
 | Step | Skill | Responsibility | Skip when |
 | --- | --- | --- | --- |
 | 1 | `clny-find-requirements` | Investigate reports and existing evidence; distinguish defects, intended behavior, misunderstandings, and unresolved intent. | The request is plainly new behavior, or requirements are already adequate. |
 | 2 | `clny-plan-requirements` | Establish new requirements for a change or resolve remaining product decisions with the owner. | Existing evidence already settles the required behavior. |
-| 3 | `clny-plan-implementation` | Convert established intent into bounded implementation, documentation, and validation work. | Reviewing a change that already exists. |
-| 4 | `clny-review-changes` | Review an existing change against requirements, engineering guidance, and evidence. | Never for an implemented increment or PR. |
+| 3 | `clny-plan-implementation` | Convert established intent into bounded implementation, documentation, and validation work. | The change is already implemented, or a small edit has a clear implementation. |
+| 4 | `clny-review-changes` | Review an existing change against requirements, engineering guidance, and evidence. | For an explicitly low-risk edit outside a PR, follow the repository’s lightweight review rules. Review every PR. |
 
 Implementation sits between steps 3 and 4 and has no skill of its own. A request for new behavior starts at step 2 when consequential decisions remain. A bug report starts at step 1 and needs step 2 only if product decisions remain. A PR with adequate requirements goes directly to step 4; unclear requirements send it back to step 1. The change workflow reads the guidance that the repository workflow maintains and returns guidance and charter findings to it.
 
