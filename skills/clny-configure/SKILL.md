@@ -3,7 +3,7 @@ name: clny-configure
 description: >-
   Use when establishing, auditing, or maintaining a repository's guidance hierarchy, including the charter of what the repository is responsible for, its entry point, architecture rules, component guides, and validation instructions, or reconciling that guidance with a proposed or completed change. Interviews the owner about the repository's standing responsibilities. Not for interviews about a specific change, implementation task decomposition, or changing application behavior. Repository workflow: run first on a repository, again whenever its responsibilities or guidance change, and when the repository's recorded suite version differs from the installed one; the change workflow reads what it maintains.
 metadata:
-  version: "0.5.0"
+  version: "0.6.0"
   status: "draft"
 ---
 

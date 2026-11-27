@@ -16,6 +16,12 @@ Compare the recorded version with the installed suite before applying migration 
 
 Every release adds one entry, newest first: the version and date, what changed, whether it is blocking, and acceptance criteria. Criteria are statements about a configured repository that an agent can check and, where they fail, turn into interview questions. A release that asks nothing of configured repositories says so.
 
+## 0.6.0 — 2026-11-27
+
+Blocking: no. Established intent can go directly to the appropriate stage. Small edits can use a project's lightweight route. A repository can opt into an exact-commit local review receipt.
+
+Acceptance: existing repositories have no required configuration change. For a repository adopting the optional gate, demonstrate a permitted documentation edit, a sensitive change blocked before review, and a new head blocked after its predecessor passed.
+
 ## 0.5.0 — 2026-11-20
 
 Blocking: no.
